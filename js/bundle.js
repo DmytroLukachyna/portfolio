@@ -189,6 +189,8 @@ function translation() {
     document.querySelectorAll('.item__descr')[2].textContent = data[nyelv].portfolioitemflags;
     document.querySelectorAll('.item__descr')[3].textContent = data[nyelv].portfolioitemski;
     document.querySelectorAll('.item__descr')[4].textContent = data[nyelv].portfolioitemtest;
+    document.querySelectorAll('.item__descr')[5].textContent = data[nyelv].portfolioitemtest;
+    document.querySelectorAll('.item__descr')[6].textContent = data[nyelv].portfolioitemrandom;
     document.querySelector('.certificates__title').textContent = data[nyelv].certificatestitle;
     document.querySelector('.certificates__descr').textContent = data[nyelv].certificatesdescr1;
     document.querySelector('.certificates__descr-secondary').textContent = data[nyelv].certificatesdescr2;
@@ -265,6 +267,7 @@ function translation() {
       "portfolioitemflags": "Page with language selection and particles",
       "portfolioitemski": "Full-fledged Ski & Snowboard School site",
       "portfolioitemtest": "Test task for Ukrainian IT company",
+      "portfolioitemrandom": "Simple randomizer on pure JS",
       "certificatestitle": "Certificates",
       "certificatesdescr1": "Completed courses and tests on various educational IT-platforms",
       "certificatesdescr2": "(click on the certificate to visit its original version)",
@@ -324,6 +327,7 @@ function translation() {
       "portfolioitemflags": "\u0421\u0442\u043E\u0440\u0456\u043D\u043A\u0430 \u0437 \u0432\u0438\u0431\u043E\u0440\u043E\u043C \u043C\u043E\u0432\u0438 \u0442\u0430 particle-\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0430\u043C\u0438",
       "portfolioitemski": "\u041F\u043E\u0432\u043D\u043E\u0444\u0443\u043D\u043A\u0446\u0456\u043E\u043D\u0430\u043B\u044C\u043D\u0438\u0439 \u0441\u0430\u0439\u0442 \u043B\u0438\u0436\u043D\u043E\u0457 \u0448\u043A\u043E\u043B\u0438",
       "portfolioitemtest": "\u0422\u0435\u0441\u0442\u043E\u0432\u0435 \u0437\u0430\u0432\u0434\u0430\u043D\u043D\u044F \u0434\u043B\u044F \u0443\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u043E\u0457 IT-\u043A\u043E\u043C\u043F\u0430\u043D\u0456\u0457",
+      "portfolioitemrandom": "\u041F\u0440\u043E\u0441\u0442\u0438\u0439 \u0440\u0430\u043D\u0434\u043E\u043C\u0430\u0439\u0437\u0435\u0440 \u043D\u0430 \u0447\u0438\u0441\u0442\u043E\u043C\u0443 JS",
       "certificatestitle": "\u0421\u0435\u0440\u0442\u0438\u0444\u0456\u043A\u0430\u0442\u0438",
       "certificatesdescr1": "\u041F\u0440\u043E\u0439\u0434\u0435\u043D\u0456 \u043A\u0443\u0440\u0441\u0438 \u0442\u0430 \u0442\u0435\u0441\u0442\u0438 \u043D\u0430 \u0440\u0456\u0437\u043D\u043E\u043C\u0430\u043D\u0456\u0442\u043D\u0438\u0445 \u043E\u0441\u0432\u0456\u0442\u043D\u0456\u0445 IT-\u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430\u0445",
       "certificatesdescr2": "(\u043D\u0430\u0442\u0438\u0441\u043D\u0456\u0442\u044C \u043D\u0430 \u0441\u0435\u0440\u0442\u0438\u0444\u0456\u043A\u0430\u0442 \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0449\u043E\u0431 \u043F\u0435\u0440\u0435\u0439\u0442\u0438 \u043D\u0430 \u0439\u043E\u0433\u043E \u043E\u0440\u0438\u0433\u0456\u043D\u0430\u043B\u044C\u043D\u0443 \u0432\u0435\u0440\u0441\u0456\u044E)",
@@ -391,6 +395,7 @@ function translation() {
       "portfolioitemflags": "\u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 \u0441 \u0432\u044B\u0431\u043E\u0440\u043E\u043C \u044F\u0437\u044B\u043A\u0430 \u0438 particle.js",
       "portfolioitemski": "\u041F\u043E\u043B\u043D\u043E\u0444\u0443\u043D\u043A\u0446\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0439 \u0441\u0430\u0439\u0442 \u043B\u044B\u0436\u043D\u043E\u0439 \u0448\u043A\u043E\u043B\u044B",
       "portfolioitemtest": "\u0422\u0435\u0441\u0442\u043E\u0432\u043E\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 \u0434\u043B\u044F \u0443\u043A\u0440\u0430\u0438\u043D\u0441\u043A\u043E\u0439 IT-\u043A\u043E\u043C\u043F\u0430\u043D\u0438\u0438",
+      "portfolioitemrandom": "\u041F\u0440\u043E\u0441\u0442\u043E\u0439 \u0440\u0430\u043D\u0434\u043E\u043C\u0430\u0439\u0437\u0435\u0440 \u043D\u0430 \u0447\u0438\u0441\u0442\u043E\u043C JS",
       "certificatestitle": "\u0421\u0435\u0440\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u044B",
       "certificatesdescr1": "\u041F\u0440\u043E\u0439\u0434\u0435\u043D\u043D\u044B\u0435 \u043A\u0443\u0440\u0441\u044B \u0438 \u0442\u0435\u0441\u0442\u044B \u043D\u0430 \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u044B\u0445 \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0445 IT-\u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430\u0445",
       "certificatesdescr2": "(\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u0441\u0435\u0440\u0442\u0438\u0444\u0438\u043A\u0430\u0442 \u0434\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B \u043F\u0435\u0440\u0435\u0439\u0442\u0438 \u043D\u0430 \u0435\u0433\u043E \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\u044C\u043D\u0443\u044E \u0432\u0435\u0440\u0441\u0438\u044E)",
@@ -573,7 +578,7 @@ module.exports = {
   \***********************************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 43:0-14 */
+/*! CommonJS bailout: module.exports is used directly at 47:0-14 */
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var bind = __webpack_require__(/*! ../internals/function-bind-context */ "./node_modules/core-js/internals/function-bind-context.js");
@@ -584,13 +589,14 @@ var arraySpeciesCreate = __webpack_require__(/*! ../internals/array-species-crea
 
 var push = [].push;
 
-// `Array.prototype.{ forEach, map, filter, some, every, find, findIndex }` methods implementation
+// `Array.prototype.{ forEach, map, filter, some, every, find, findIndex, filterOut }` methods implementation
 var createMethod = function (TYPE) {
   var IS_MAP = TYPE == 1;
   var IS_FILTER = TYPE == 2;
   var IS_SOME = TYPE == 3;
   var IS_EVERY = TYPE == 4;
   var IS_FIND_INDEX = TYPE == 6;
+  var IS_FILTER_OUT = TYPE == 7;
   var NO_HOLES = TYPE == 5 || IS_FIND_INDEX;
   return function ($this, callbackfn, that, specificCreate) {
     var O = toObject($this);
@@ -599,7 +605,7 @@ var createMethod = function (TYPE) {
     var length = toLength(self.length);
     var index = 0;
     var create = specificCreate || arraySpeciesCreate;
-    var target = IS_MAP ? create($this, length) : IS_FILTER ? create($this, 0) : undefined;
+    var target = IS_MAP ? create($this, length) : IS_FILTER || IS_FILTER_OUT ? create($this, 0) : undefined;
     var value, result;
     for (;length > index; index++) if (NO_HOLES || index in self) {
       value = self[index];
@@ -611,7 +617,10 @@ var createMethod = function (TYPE) {
           case 5: return value;             // find
           case 6: return index;             // findIndex
           case 2: push.call(target, value); // filter
-        } else if (IS_EVERY) return false;  // every
+        } else switch (TYPE) {
+          case 4: return false;             // every
+          case 7: push.call(target, value); // filterOut
+        }
       }
     }
     return IS_FIND_INDEX ? -1 : IS_SOME || IS_EVERY ? IS_EVERY : target;
@@ -639,7 +648,10 @@ module.exports = {
   find: createMethod(5),
   // `Array.prototype.findIndex` method
   // https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
-  findIndex: createMethod(6)
+  findIndex: createMethod(6),
+  // `Array.prototype.filterOut` method
+  // https://github.com/tc39/proposal-array-filtering
+  filterOut: createMethod(7)
 };
 
 
@@ -1780,7 +1792,7 @@ var store = __webpack_require__(/*! ../internals/shared-store */ "./node_modules
 (module.exports = function (key, value) {
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
-  version: '3.7.0',
+  version: '3.8.0',
   mode: IS_PURE ? 'pure' : 'global',
   copyright: '© 2020 Denis Pushkarev (zloirock.ru)'
 });
