@@ -3296,9 +3296,8 @@ function main() {
     try {
       for (_iterator.s(); !(_step = _iterator.n()).done;) {
         var element = _step.value;
-        var contentWidth = element.contentRect;
-        console.log("Full width: ".concat(window.innerWidth));
-        console.log("Content width: ".concat(contentWidth.width));
+        var contentWidth = element.contentRect; // console.log(`Full width: ${window.innerWidth}`);
+        // console.log(`Content width: ${contentWidth.width}`);
 
         if (window.innerWidth > contentWidth.width) {
           document.documentElement.classList.add('scrollbar_active');
