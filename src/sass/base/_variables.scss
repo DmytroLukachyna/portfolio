@@ -1,0 +1,64 @@
+:root {
+  --loader-outer-color: rgb(52, 152, 219);
+  --loader-center-color: rgb(231, 76, 60);
+  --loader-inner-color: rgb(249, 201, 34);
+}
+
+* {
+  // transition: all .2s ease;
+  transition: background 0.15s ease-in-out;
+  &::selection {
+    background: transparent;
+    color: var(--selection-text-color);
+  }
+}
+
+.light {
+  --selection-text-color: rgb(52, 52, 52);
+  --mainscreen-img: url('../img/mainscreen_light.png');
+  --mainscreen-photo: url('../img/photo_light.png');
+  --background-main-color: rgb(216, 216, 216);
+  --background-secondary-color: rgb(193, 193, 193);
+  --background-footer-color: rgb(39, 39, 39);
+  --background-invert-color: rgb(49, 30, 37);
+  --menu-overlay-color: rgb(255, 255, 255);
+  --menu-background-color: rgb(128, 128, 128);
+  --menu-text-color: rgb(255, 255, 255);
+  --text-color: rgb(128, 128, 128);
+  --hamburger-color: rgb(128, 128, 128);
+  --social-hover-color: rgb(158, 158, 158);
+  --btn-hover-color: rgb(128, 128, 128);
+  --btn-hover-text-color: rgb(255, 255, 255);
+  --portfolio-card-color: rgb(216, 216, 216);
+  --portfolio-card-shadow-color: rgba(171, 171, 171, 0.9);
+  --portfolio-overlay-text-color: rgb(216, 216, 216);
+}
+
+.dark {
+  --selection-text-color: rgb(249, 194, 130);
+  --mainscreen-img: url('../img/mainscreen_dark.png');
+  --mainscreen-photo: url('../img/photo_dark.png');
+  --background-main-color: rgb(49, 30, 37);
+  --background-secondary-color: rgb(45, 13, 25);
+  --background-footer-color: rgb(45, 13, 25);
+  --background-invert-color: rgb(200, 200, 200);
+  --menu-overlay-color: rgb(30, 30, 30);
+  --menu-background-color: rgb(49, 30, 37);
+  --menu-text-color: rgb(219, 154, 100);
+  --text-color: rgb(219, 154, 100);
+  --hamburger-color: rgb(219, 154, 100);
+  --social-hover-color: rgb(235, 179, 160);
+  --btn-hover-color: rgb(219, 154, 100);
+  --btn-hover-text-color: rgb(255, 255, 255);
+  --portfolio-card-color: rgb(70, 53, 60);
+  --portfolio-card-shadow-color: rgba(219, 154, 100, 0.9);
+  --portfolio-overlay-text-color: rgb(219, 154, 100);
+}
+
+/* белый для текста
+черный для текста, белый для фона
+#3B2930 - более светлый бордовый
+#C9C9C9 - сероватый текст для бордового
+
+#311E25 - темнобордовый
+#DB9A64 - золотой для текста */

@@ -1,0 +1,77 @@
+.workstudy {
+  padding: 70px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__work {
+    position: relative;
+    border-left: 2px solid var(--text-color);
+    .card__descr {
+      p {
+        position: relative;
+        &:before {
+          position: absolute;
+          content: '';
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: var(--text-color);
+          top: 8px;
+          left: -11px;
+        }
+      }
+    }
+  }
+  &__study {
+    text-align: right;
+  }
+  &__column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    padding: 0 30px;
+    i {
+      font-size: 80px;
+    }
+  }
+  &__header {
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+
+.card {
+  font-size: 18px;
+  margin-top: 20px;
+  &__date {
+    position: relative;
+    display: inline-block;
+    padding: 10px 13px;
+    border-radius: 5px;
+    background: var(--text-color);
+    color: var(--btn-hover-text-color);
+  }
+  &__subtitle {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  &__title {
+    margin-top: 5px;
+    font-weight: 700;
+    font-size: 26px;
+  }
+  &__descr {
+    margin-top: 5px;
+    font-size: 17px;
+    font-style: italic;
+    p {
+      margin-top: 5px;
+    }
+  }
+}

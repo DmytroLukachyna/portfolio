@@ -1,0 +1,49 @@
+.languages {
+  position: fixed;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  // transition: all .5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+  z-index: 1;
+  &__item {
+    width: 50px;
+    height: 50px;
+    margin: 10px 10px 0 10px;
+    order: 2;
+    opacity: 0.25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    &:active {
+      transform: scale(0.95);
+    }
+    &_active {
+      order: 1;
+      opacity: 1;
+      visibility: visible;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.lock-scroll {
+  .languages {
+    right: 32px;
+  }
+}
