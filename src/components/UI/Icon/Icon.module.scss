@@ -1,0 +1,41 @@
+.icon {
+  display: inline-flex;
+  &.path {
+    &_currentColor svg path {
+      fill: currentColor;
+    }
+  }
+  &.stroke {
+    &_currentColor svg path {
+      stroke: currentColor;
+    }
+  }
+  &.ellipse {
+    &_currentColor svg ellipse {
+      fill: currentColor;
+    }
+  }
+}
+
+// .icon {
+// 	@include display;
+// 	line-height: 0;
+
+//     &.cursor {
+// 		&_default {
+// 			cursor: default;
+// 		}
+// 		&_pointer {
+// 			cursor: pointer;
+// 		}
+// 		&_move {
+// 			cursor: move;
+// 		}
+// 		&_inherit {
+// 			cursor: inherit;
+// 		}
+// 	}
+// 	&.clickThrough {
+// 		pointer-events: none;
+// 	}
+// }

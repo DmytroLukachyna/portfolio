@@ -1,0 +1,46 @@
+.subtitle {
+  font-size: 24px;
+}
+
+.text {
+  font-size: 18px;
+}
+
+.link {
+  font-size: 24px;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+}
+
+.citizenFlag {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+@media (max-width: 374px) {
+  .email {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 499px) {
+  .text {
+    text-align: center;
+  }
+  .citizenFlag {
+    justify-content: center;
+  }
+}
+
+// .profile {
+//   &__social {
+//     a {
+//       &:hover {
+//         color: var(--social-hover-color);
+//       }
+//     }
+//   }
+// }

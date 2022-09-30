@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@mixin font {
+  font-family: 'PT Sans', -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+}
+@mixin font-normal {
+  @include font;
+  font-style: normal;
+}
+@mixin font-italic {
+  @include font;
+  font-style: italic;
+}
+@mixin font-400-regular {
+  @include font-normal;
+  font-weight: 400;
+}
+@mixin font-700-bold {
+  @include font-normal;
+  font-weight: 700;
+}
+@mixin font-400-regular-italic {
+  @include font-italic;
+  font-weight: 400;
+}
+@mixin font-700-bold-italic {
+  @include font-italic;
+  font-weight: 700;
+}
+
+//// TEMPLATES
+
+// @include font-400-regular;
+// @include font-700-bold;
+// @include font-400-regular-italic;
+// @include font-700-bold-italic;
+
+@mixin text-align {
+  &.text-align {
+    &_left {
+      text-align: left;
+    }
+    &_right {
+      text-align: right;
+    }
+    &_center {
+      text-align: center;
+    }
+    &_justify {
+      text-align: justify;
+    }
+    &_start {
+      text-align: start;
+    }
+    &_end {
+      text-align: end;
+    }
+    &_inherit {
+      text-align: inherit;
+    }
+  }
+}
+@mixin text-transform {
+  &.text-transform {
+    &_none {
+      text-transform: none;
+    }
+    &_lowercase {
+      text-transform: lowercase;
+    }
+    &_uppercase {
+      text-transform: uppercase;
+    }
+    &_capitalize {
+      text-transform: capitalize;
+    }
+    &_first-letter {
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    &_inherit {
+      text-transform: inherit;
+    }
+    &_initial {
+      text-transform: initial;
+    }
+    &_unset {
+      text-transform: unset;
+    }
+  }
+}
+
+@mixin selection {
+  &::selection {
+    background: transparent;
+    color: var(--selection-text-color);
+  }
+}

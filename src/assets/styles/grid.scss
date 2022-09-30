@@ -1,0 +1,355 @@
+@import './variables.scss';
+
+@mixin display {
+  &.display {
+    &_table {
+      display: table;
+    }
+    &_inline {
+      display: inline;
+    }
+    &_inline-block {
+      display: inline-block;
+    }
+    &_block {
+      display: block;
+    }
+    &_flex {
+      display: flex;
+    }
+    &_inline-flex {
+      display: inline-flex;
+    }
+    &_grid {
+      display: grid;
+    }
+    &_inline-grid {
+      display: inline-grid;
+    }
+    &_none {
+      display: none;
+    }
+  }
+}
+@mixin position {
+  &.position {
+    &_static {
+      position: static;
+    }
+    &_relative {
+      position: relative;
+    }
+    &_absolute {
+      position: absolute;
+    }
+    &_fixed {
+      position: fixed;
+    }
+    &_sticky {
+      position: sticky;
+    }
+  }
+}
+@mixin flex-direction {
+  &.flex-direction {
+    &_row {
+      flex-direction: row;
+    }
+    &_row-reverse {
+      flex-direction: row-reverse;
+    }
+    &_column {
+      flex-direction: column;
+    }
+    &_column-reverse {
+      flex-direction: column-reverse;
+    }
+    &_inherit {
+      flex-direction: inherit;
+    }
+    &_initial {
+      flex-direction: initial;
+    }
+    &_unset {
+      flex-direction: unset;
+    }
+  }
+}
+@mixin justify-content {
+  &.justify-content {
+    &_center {
+      justify-content: center;
+    }
+    &_start {
+      justify-content: start;
+    }
+    &_end {
+      justify-content: end;
+    }
+    &_flex-start {
+      justify-content: flex-start;
+    }
+    &_flex-end {
+      justify-content: flex-end;
+    }
+    &_left {
+      justify-content: left;
+    }
+    &_right {
+      justify-content: right;
+    }
+    &_baseline {
+      justify-content: baseline;
+    }
+    &_space-between {
+      justify-content: space-between;
+    }
+    &_space-around {
+      justify-content: space-around;
+    }
+    &_space-evenly {
+      justify-content: space-evenly;
+    }
+    &_stretch {
+      justify-content: stretch;
+    }
+    &_inherit {
+      justify-content: inherit;
+    }
+    &_initial {
+      justify-content: initial;
+    }
+    &_unset {
+      justify-content: unset;
+    }
+  }
+}
+@mixin align-items {
+  &.align-items {
+    &_flex-start {
+      align-items: flex-start;
+    }
+    &_flex-end {
+      align-items: flex-end;
+    }
+    &_center {
+      align-items: center;
+    }
+    &_baseline {
+      align-items: baseline;
+    }
+    &_stretch {
+      align-items: stretch;
+    }
+    &_inherit {
+      align-items: inherit;
+    }
+    &_initial {
+      align-items: initial;
+    }
+    &_unset {
+      align-items: unset;
+    }
+  }
+}
+@mixin align-content {
+  &.align-content {
+    &_center {
+      align-content: center;
+    }
+    &_start {
+      align-content: start;
+    }
+    &_end {
+      align-content: end;
+    }
+    &_flex-start {
+      align-content: flex-start;
+    }
+    &_flex-end {
+      align-content: flex-end;
+    }
+    &_normal {
+      align-content: normal;
+    }
+    &_baseline {
+      align-content: baseline;
+    }
+    &_space-around {
+      align-content: space-around;
+    }
+    &_space-between {
+      align-content: space-between;
+    }
+    &_space-evenly {
+      align-content: space-evenly;
+    }
+    &_stretch {
+      align-content: stretch;
+    }
+    &_inherit {
+      align-content: inherit;
+    }
+    &_initial {
+      align-content: initial;
+    }
+    &_unset {
+      align-content: unset;
+    }
+  }
+}
+@mixin align-self {
+  &.align-self {
+    &_center {
+      align-self: center;
+    }
+    &_start {
+      align-self: start;
+    }
+    &_end {
+      align-self: end;
+    }
+    &_flex-start {
+      align-self: flex-start;
+    }
+    &_flex-end {
+      align-self: flex-end;
+    }
+    &_auto {
+      align-self: auto;
+    }
+    &_normal {
+      align-self: normal;
+    }
+    &_baseline {
+      align-self: baseline;
+    }
+    &_space-around {
+      align-self: space-around;
+    }
+    &_space-between {
+      align-self: space-between;
+    }
+    &_space-evenly {
+      align-self: space-evenly;
+    }
+    &_stretch {
+      align-self: stretch;
+    }
+    &_revert {
+      align-self: revert;
+    }
+    &_inherit {
+      align-self: inherit;
+    }
+    &_initial {
+      align-self: initial;
+    }
+    &_unset {
+      align-self: unset;
+    }
+  }
+}
+@mixin flex-wrap {
+  &.flex-wrap {
+    &_wrap {
+      flex-wrap: wrap;
+    }
+    &_nowrap {
+      flex-wrap: nowrap;
+    }
+    &_wrap-reverse {
+      flex-wrap: wrap-reverse;
+    }
+  }
+}
+@mixin flex-grow {
+  @for $i from 0 through 5 {
+    &.flex-grow_#{$i} {
+      flex-grow: $i;
+    }
+  }
+}
+@mixin gap {
+  @for $i from 1 through 10 {
+    $gap: 4 * $i;
+    &.gap_#{$gap} {
+      $value: 1px * $gap;
+      gap: $value;
+    }
+  }
+}
+@mixin overflow {
+  &.overflow {
+    &_visible {
+      overflow: visible;
+    }
+    &_scroll {
+      overflow: scroll;
+    }
+    &_x-scroll {
+      overflow-x: scroll;
+    }
+    &_y-scroll {
+      overflow-y: scroll;
+    }
+    &_auto {
+      overflow: auto;
+    }
+    &_x-auto {
+      overflow-x: auto;
+    }
+    &_y-auto {
+      overflow-y: auto;
+    }
+    &_hidden {
+      overflow: hidden;
+    }
+    &_x-hidden {
+      overflow-x: hidden;
+    }
+    &_y-hidden {
+      overflow-y: hidden;
+    }
+    &_inherit {
+      overflow: inherit;
+    }
+    &_x-inherit {
+      overflow-x: inherit;
+    }
+    &_y-inherit {
+      overflow-y: inherit;
+    }
+  }
+}
+@mixin transition {
+  &.transition {
+    &_default {
+      transition: all 0.2s ease;
+    }
+    &_inherit {
+      transition: inherit;
+    }
+    &_initial {
+      transition: initial;
+    }
+    &_unset {
+      transition: unset;
+    }
+  }
+}
+
+//// TEMPLATES
+
+// @include display;
+// @include position;
+// @include flex-direction;
+// @include justify-content;
+// @include align-items;
+// @include align-content;
+// @include align-self;
+// @include flex-wrap;
+// @include flex-grow;
+// @include gap;
+// @include overflow;
+// @include transition;

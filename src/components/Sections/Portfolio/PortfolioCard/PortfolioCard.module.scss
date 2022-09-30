@@ -1,0 +1,272 @@
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
+  background: var(--portfolio-card-color);
+  width: #{'clamp(296px, 100%, 360px)'};
+  outline: 1px solid rgba(219, 154, 100, 0.25);
+}
+
+.preview {
+  display: block;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  .overlay {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.55);
+    user-select: none;
+    transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+    z-index: 1;
+    .text {
+      font-size: 26px;
+      color: var(--portfolio-overlay-text-color);
+    }
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.75);
+  }
+}
+
+.info {
+  padding: 8px 16px;
+  row-gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 20px;
+}
+
+.description,
+.adapt,
+.gh {
+  font-size: 16px;
+}
+
+.stack {
+  display: flex;
+  width: 128px;
+  height: 64px;
+  flex-shrink: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid green;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: space-between;
+}
+
+.gh {
+  width: 132px;
+  text-align: center;
+  justify-content: center;
+  line-height: 20px;
+}
+
+.ghIcon {
+  margin-left: 6px;
+  width: 20px;
+  height: 20px;
+}
+
+.blank {
+  min-height: 308px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: wait;
+  .note {
+    font-size: 32px;
+    opacity: 0.75;
+    animation: fade 5s infinite ease-in-out;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    .overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+    box-shadow: 0 20px 44px -16px var(--portfolio-card-shadow-color);
+    transform: translateY(-4px);
+  }
+}
+
+.item {
+  &__stack {
+    &-list {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: underline dotted;
+      text-align: center;
+      &:hover {
+        .item__stack-wrapper {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    &-wrapper {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      transition: all 0.25s ease-in-out;
+      border-radius: 10px;
+      padding: 5px 10px;
+    }
+    &-item {
+      height: 22px;
+      width: 22px;
+      margin: 1px 2px;
+      img {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &_visible {
+    display: block;
+  }
+  &_hidden {
+    display: none;
+  }
+  &_visible-to-hidden {
+    animation: visible-to-hidden 0.5s ease-in-out;
+  }
+  &_hidden-to-visible {
+    animation: hidden-to-visible 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 499px) {
+  .item__blank {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 414px) {
+  .item {
+    &__title {
+      font-size: 18px;
+    }
+    &__adaptivity,
+    &__descr,
+    &__github,
+    &__stack-list {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .item__title {
+    font-size: 16px;
+  }
+  .item__adaptivity,
+  .item__descr,
+  .item__github,
+  .item__stack-list {
+    font-size: 14px;
+  }
+  .item__stack-wrapper {
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 359px) {
+  .item__title {
+    font-size: 14px;
+  }
+  .item__adaptivity,
+  .item__descr,
+  .item__github,
+  .item__stack-list {
+    font-size: 12px;
+  }
+  .item {
+    height: 285px;
+  }
+  .item__info {
+    height: 83px;
+  }
+  .item__stack-wrapper {
+    padding: 3px 8px;
+  }
+  .item__stack-item {
+    height: 16px;
+    width: 16px;
+    margin: 1px;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 0.75;
+  }
+}
+
+@keyframes visible-to-hidden {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes hidden-to-visible {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

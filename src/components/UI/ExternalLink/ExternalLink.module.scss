@@ -1,0 +1,21 @@
+@import '../../../assets/styles/fonts.scss';
+
+.link {
+  display: inline-flex;
+  color: var(--text-color);
+  text-decoration: none;
+  &.font {
+    &_400 {
+      @include font-400-regular;
+    }
+    &_700 {
+      @include font-700-bold;
+    }
+    &_400-italic {
+      @include font-400-regular-italic;
+    }
+    &_700-bold {
+      @include font-700-bold-italic;
+    }
+  }
+}

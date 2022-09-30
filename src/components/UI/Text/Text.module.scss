@@ -1,0 +1,35 @@
+@import '../../../assets/styles/grid.scss';
+@import '../../../assets/styles/fonts.scss';
+
+.text {
+  color: var(--text-color);
+  @include display;
+  @include transition;
+  @include text-align;
+  @include text-transform;
+  @include selection;
+  &.noSelect {
+    user-select: none;
+  }
+  &.font {
+    &_400 {
+      @include font-400-regular;
+    }
+    &_700 {
+      @include font-700-bold;
+    }
+    &_400-italic {
+      @include font-400-regular-italic;
+    }
+    &_700-bold {
+      @include font-700-bold-italic;
+    }
+  }
+}
+
+// .text {
+// 	&::selection {
+// 		background: map-get($text-selection-color, 'background-color');
+// 		color: map-get($text-selection-color, 'text-color');
+// 	}
+// }

@@ -1,0 +1,77 @@
+{
+  "general": {
+    "page-title": "Портфоліо | Дмитро Лукачина",
+    "socials": "Соціальні мережі"
+  },
+  "mainscreen": {
+    "name": "Дмитро Лукачина",
+    "position": "Junior Front-end developer",
+    "portfolio": "Портфоліо",
+    "about": "CV / Про мене"
+  },
+  "about": {
+    "title": "Про мене",
+    "subtitleDescription": "Трохи про себе",
+    "textDescription1": "Привіт! Мене звати Дмитро, я – Front-end розробник.",
+    "textDescription2": "Мені подобається шукати цікаві рішення для виконання завдань, поставлених переді мною, і разом із моїми ідеями реалізовувати їх як інтерфейси. Окрім того, я постійно розвиваюся у цій сфері, адже досконалості немає меж :)",
+    "textDescription3": "У процесі веб-розробки головне для мене – валідність коду, повна адаптивність контенту, акуратність та читабельність верстки й компонентів, а також застосування найновіших та найактуальніших технологій.",
+    "textDescription4": "Професійні навички та технології / фреймворки у використанні:",
+    "subtitleInfotmation": "Персональна інформація",
+    "textInformationNumber": "Номер телефону (також у Telegram і Viber):",
+    "textInformationSocialLinks": "Посилання на Djinni, Github і соцмережі:",
+    "textInformationCitizenships": "Громадянства:",
+    "textInformationCitizenshipUA": "Україна",
+    "textInformationCitizenshipHU": "Угорщина",
+    "textInformationLanguages": "Володіння мовами",
+    "textInformationLanguageUA": "Українська – рідна, вільне володіння",
+    "textInformationLanguageEN": "Англійська – В2 (Upper-Intermediate)",
+    "textInformationLanguageRU": "Російська – С2 (вільне володіння)",
+    "textInformationLanguageHU": "Угорська – В1 (Intermediate)",
+    "textInformationCV": "Резюме (у форматі PDF, у новій вкладці):",
+    "textInformationCVUA": "Українською",
+    "textInformationCVEN": "Англійською",
+    "textInformationCVHU": "Угорською",
+    "textInformationCVRU": "Російською"
+  },
+  "portfolio": {
+    "title": "Портфоліо",
+    "buttonAll": "Усі проекти",
+    "buttonCommercial": "Комерційні",
+    "buttonTestTasks": "Тестові завдання",
+    "buttonPetProjects": "Пет-проекти",
+    "workInProgress": "Робота над проектом триває!",
+    "visitWebsite": "Перейти на сайт",
+    "techStack": "Використані технології та фреймворки",
+    "adaptiveness": "Адаптивність: 320-1920",
+    "sourceCode": "Вихідний код"
+  },
+  "portfolioCardDescription": {
+    "lex": "Сайт компанїї з захисту авто з Харкова",
+    "ecobud": "Сайт архітектурної компанії з Києва",
+    "videcor": "Сайт дизайнерського бюро з Одеси",
+    "fireplace": "Сайт дистрибʼютора камінів з Харкова",
+    "free-account": "Сайт ізраїльського фінансового порталу",
+    "randomizer": "Простий дворежимний рандомайзер на React",
+    "orange": "Повнофункціональний сайт веб-студії із США",
+    "sparcle": "Повнофункціональний сайт клінінгової фірми",
+    "languages": "Сторінка з вибором мови та particle-елементами",
+    "ski": "Повнофункціональний сайт лижної школи",
+    "casino": "Тестове завдання для української IT-компанії",
+    "energo-pro": "Тестове завдання для української IT-компанії",
+    "tradenet": "Тестове завдання для української IT-компанії",
+    "transactions": "Тестове завдання для української IT-компанії",
+    "encoretravel": "Сайт діючої туристичної агенції в Україні"
+  },
+  "menu": {
+    "home": "Головна",
+    "about": "Про мене",
+    "portfolio": "Портфоліо",
+    "education": "Освіта і сертифікати",
+    "experience": "Досвід роботи"
+  },
+  "warning": {
+    "warning-1": "Ой :( Щось пішло не так!",
+    "warning-2": "Вы переглядаєте цей сайт на пристрої, ширини екрану котрого недостатньо для того, щоб відображати його належним чином.",
+    "warning-3": "Для перегляду сайту, будь ласка, скористайтесь іншим пристроєм!"
+  }
+}

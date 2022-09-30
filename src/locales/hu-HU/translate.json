@@ -1,0 +1,77 @@
+{
+  "general": {
+    "page-title": "Portfólió | Demeter Lukácsina",
+    "socials": "Közösségi hálózatok"
+  },
+  "mainscreen": {
+    "name": "Demeter Lukácsina",
+    "position": "Junior Front-end fejlesztő",
+    "portfolio": "Portfólió",
+    "about": "CV / Rólam"
+  },
+  "about": {
+    "title": "Rólam",
+    "subtitleDescription": "Egy kicsit magamról",
+    "textDescription1": "Привет! Меня зовут Дмитрий, я – Front-end разработчик.",
+    "textDescription2": "Мне нравится искать интересные решения для выполнения стоящих передо мной задач и вместе с моими идеями реализовывать их в виде интерфейсов. Кроме того, я постоянно развиваюсь в этой сфере, так как совершенству нет предела :)",
+    "textDescription3": "В процессе веб-разработки главное для меня – валидность кода, полная адаптивность контента, аккуратность и читаемость верстки и компонентов, а также применение самых новых и актуальных технологий.",
+    "textDescription4": "Профессиональные навыки и используемые технологии / фреймворки:",
+    "subtitleInfotmation": "Персональная информация",
+    "textInformationNumber": "Номер телефона (также в Telegram и Viber):",
+    "textInformationSocialLinks": "Ссылки на Djinni, Github и социальные сети:",
+    "textInformationCitizenships": "Állampolgárságok:",
+    "textInformationCitizenshipUA": "Ukrán",
+    "textInformationCitizenshipHU": "Magyar",
+    "textInformationLanguages": "Nyelvtudás",
+    "textInformationLanguageUA": "Украинский – родной, свободное владение",
+    "textInformationLanguageEN": "Английский – В2 (Upper-Intermediate)",
+    "textInformationLanguageRU": "Русский – С2 (свободное владение)",
+    "textInformationLanguageHU": "Венгерский – В1 (Intermediate)",
+    "textInformationCV": "Резюме (в формате PDF, в новой вкладке):",
+    "textInformationCVUA": "Ukránul",
+    "textInformationCVEN": "Angolul",
+    "textInformationCVHU": "Magyarul",
+    "textInformationCVRU": "Oroszul"
+  },
+  "portfolio": {
+    "title": "Portfólió",
+    "buttonAll": "All",
+    "buttonCommercial": "Commercial",
+    "buttonTestTasks": "Test Tasks",
+    "buttonPetProjects": "Pet Projects",
+    "workInProgress": "Development of the project is in progress!",
+    "visitWebsite": "Visit the website",
+    "techStack": "Technologies and frameworks used",
+    "adaptiveness": "Adaptiveness: 320-1920",
+    "sourceCode": "Forráskód itt:"
+  },
+  "portfolioCardDescription": {
+    "lex": "Landing page of Kharkiv-based car security agency",
+    "ecobud": "Landing page of architecture firm from Kyiv",
+    "videcor": "Landing page of design agency from Odessa",
+    "fireplace": "Landing page of Kharkiv-based fireplace dealer",
+    "free-account": "Landing page of Israeli finance-training portal",
+    "randomizer": "Simple two-mode randomizer on React",
+    "orange": "Feature-rich site of web studio from United States",
+    "sparcle": "Full-featured Croatian cleaning company site",
+    "languages": "Page with language selection and particles",
+    "ski": "Full-fledged Ski & Snowboard School site",
+    "casino": "Test task for Ukrainian IT company",
+    "energo-pro": "Test task for Ukrainian marketing agency",
+    "tradenet": "Test task for Ukrainian marketing agency",
+    "transactions": "Test task for Ukrainian IT product company",
+    "encoretravel": "Commercial site of active Ukrainian tour agency"
+  },
+  "menu": {
+    "home": "Kezdőlap",
+    "about": "Rólam",
+    "portfolio": "Portfólió",
+    "education": "Oktatás és tanúsítványok",
+    "experience": "Munkatapasztalat"
+  },
+  "warning": {
+    "warning-1": "Oops :( Something went wrong!",
+    "warning-2": "You are watching this site on a device which width is not enough to display it properly.",
+    "warning-3": "Please, use another device in order to continue watching this site!"
+  }
+}

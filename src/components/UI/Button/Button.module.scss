@@ -1,0 +1,47 @@
+@import '../../../assets/styles/fonts.scss';
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  &.font {
+    &_400 {
+      @include font-400-regular;
+    }
+    &_700 {
+      @include font-700-bold;
+    }
+    &_400-italic {
+      @include font-400-regular-italic;
+    }
+    &_700-bold {
+      @include font-700-bold-italic;
+    }
+  }
+  &.border {
+    &_1 {
+      border: 1px solid var(--text-color);
+    }
+    &_2 {
+      border: 2px solid var(--text-color);
+    }
+  }
+  &.active {
+    background: var(--btn-hover-color);
+    color: var(--btn-hover-text-color);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button {
+    &:hover {
+      background: var(--btn-hover-color);
+      color: var(--btn-hover-text-color);
+    }
+  }
+}

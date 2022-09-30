@@ -1,0 +1,82 @@
+.button {
+  position: fixed;
+  top: 32px;
+  left: 24px;
+  display: flex;
+  width: 60px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: var(--themeswitch-toggle-background-color);
+  cursor: pointer;
+  z-index: 11;
+  .toggle {
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(32, 32, 32, 0.24);
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transition: transform 0.25s ease;
+    &.theme {
+      &_dark {
+        transform: translateX(0) translateY(-50%);
+      }
+      &_light {
+        transform: translateX(24px) translateY(-50%);
+      }
+    }
+    // &:focus:not(:focus-visible) {
+    //   outline: 0;
+    // }
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// @media (max-width: 1199px) {
+//   .button {
+//     width: 32px;
+//     height: 60px;
+//     top: 24px;
+//   }
+// }
+
+// .theme {
+
+//
+
+//     &__toggle {
+//         bottom: 0;
+//         background-color: rgb(49, 30, 37);
+//         transition: all 0.5s ease-in-out;
+//     }
+//     input {
+//         &:focus+.theme__toggle {
+//             box-shadow: 0 0 1px var(--background-main-color);
+//         }
+//     }
+// }
+
+// @media (max-width: 1199px) {
+//     .theme {
+
+//         &__toggle:before {
+//             top: -25px;
+//         }
+//         input:checked+.theme__toggle:before {
+//             transform: translateY(30px);
+//         }
+//     }
+// }

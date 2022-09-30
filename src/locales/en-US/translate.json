@@ -1,0 +1,77 @@
+{
+  "general": {
+    "page-title": "Portfolio | Dmytro Lukachyna",
+    "socials": "Social networks"
+  },
+  "mainscreen": {
+    "name": "Dmytro Lukachyna",
+    "position": "Junior Front-end developer",
+    "portfolio": "Portfolio",
+    "about": "CV / About me"
+  },
+  "about": {
+    "title": "About me",
+    "subtitleDescription": "Briefly about myself",
+    "textDescription1": "Hello! My name is Dmytro, I am a Front-end Developer.",
+    "textDescription2": "I like to look for interesting solutions for accomplishing tasks I am facing and, together with my ideas, implement them in the form of websites and user interfaces. In addition, I am constantly developing in this sphere, since perfection knows no limits :)",
+    "textDescription3": "Validity of the code, complete adaptability of the content, the accuracy and readability of the layout or components as well as the use of the most relevant cutting-edge technologies are crucial cornerstones of my work.",
+    "textDescription4": "Professional skills and technologies / frameworks used:",
+    "subtitleInfotmation": "Personal information",
+    "textInformationNumber": "Phone number (also via Telegram and Viber):",
+    "textInformationSocialLinks": "Links to Djinni, Github and social networks:",
+    "textInformationCitizenships": "Citizenships:",
+    "textInformationCitizenshipUA": "Ukrainian",
+    "textInformationCitizenshipHU": "Hungarian",
+    "textInformationLanguages": "Language skills",
+    "textInformationLanguageUA": "Ukrainian – native (fluent)",
+    "textInformationLanguageEN": "English – B2 (Upper-Intermediate)",
+    "textInformationLanguageRU": "Russian – C2 (fluent)",
+    "textInformationLanguageHU": "Hungarian – B1 (Intermediate)",
+    "textInformationCV": "Curriculum vitae (CV) (as a PDF, in a new tab):",
+    "textInformationCVUA": "In Ukrainian",
+    "textInformationCVEN": "In English",
+    "textInformationCVHU": "In Hungarian",
+    "textInformationCVRU": "In Russian"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "buttonAll": "All",
+    "buttonCommercial": "Commercial",
+    "buttonTestTasks": "Test Tasks",
+    "buttonPetProjects": "Pet Projects",
+    "workInProgress": "Development of the project is in progress!",
+    "visitWebsite": "Visit the website",
+    "techStack": "Technologies and frameworks used",
+    "adaptiveness": "Adaptiveness: 320-1920",
+    "sourceCode": "Source code on"
+  },
+  "portfolioCardDescription": {
+    "lex": "Landing page of Kharkiv-based car security agency",
+    "ecobud": "Landing page of architecture firm from Kyiv",
+    "videcor": "Landing page of design agency from Odessa",
+    "fireplace": "Landing page of Kharkiv-based fireplace dealer",
+    "free-account": "Landing page of Israeli finance-training portal",
+    "randomizer": "Simple two-mode randomizer on React",
+    "orange": "Feature-rich site of web studio from United States",
+    "sparcle": "Full-featured Croatian cleaning company site",
+    "languages": "Page with language selection and particles",
+    "ski": "Full-fledged Ski & Snowboard School site",
+    "casino": "Test task for Ukrainian IT company",
+    "energo-pro": "Test task for Ukrainian marketing agency",
+    "tradenet": "Test task for Ukrainian marketing agency",
+    "transactions": "Test task for Ukrainian IT product company",
+    "encoretravel": "Commercial site of active Ukrainian tour agency"
+  },
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "education": "Education and certificates",
+    "experience": "Work experience"
+  },
+  "warning": {
+    "warning-1": "Oops :( Something went wrong!",
+    "warning-2": "You are watching this site on a device which width is not enough to display it properly.",
+    "warning-3": "Please, use another device in order to continue watching this site!"
+  }
+}

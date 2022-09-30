@@ -4,5 +4,8 @@
 # production
 /build
 
+# v1
+/v1_portfolio
+
 # misc
 .DS_Store

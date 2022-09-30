@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  .title {
+    position: relative;
+    font-size: 32px;
+    display: inline-flex;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 32px;
+      height: 2px;
+      background: var(--text-color);
+      top: 50%;
+      transform: translateY(100%);
+    }
+    &:before {
+      left: -44px;
+    }
+    &:after {
+      right: -44px;
+    }
+  }
+}

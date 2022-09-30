@@ -1,0 +1,116 @@
+@import '../../../assets/styles/fonts.scss';
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  transition: background-color 0.15s ease-in-out, opacity 0.5s ease-in-out, left 0.5s ease-in-out;
+  max-width: 320px;
+  background-color: var(--menu-background-color);
+  z-index: 11;
+  visibility: hidden;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  &.active {
+    opacity: 1;
+    left: 0;
+    visibility: visible;
+    .list {
+      .item {
+        transform: translateX(0);
+        opacity: 1;
+        @for $i from 1 through 6 {
+          $t: $i * 0.1 + 0.3;
+          &:nth-child(#{$i}) {
+            transition: all 0.25s cubic-bezier(0.6, 0, 0.8, 1.5) #{$t}s;
+          }
+        }
+      }
+    }
+  }
+  .list {
+    padding-left: 36px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    .item {
+      list-style-type: none;
+      position: relative;
+      transform: translateX(-80px);
+      opacity: 0;
+      &:before {
+        content: '';
+        position: absolute;
+        left: -36px;
+        top: 4px;
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        border: 1px solid var(--menu-text-color);
+        transition: background-color 0.25s ease-in-out;
+      }
+      .link {
+        color: var(--menu-text-color);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 24px;
+        line-height: 24px;
+        @include font;
+        font-weight: 400;
+        &.active {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.socials {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  .item {
+    color: var(--menu-text-color);
+    .icon {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+// .lock-scroll {
+// 	margin-right: 0;
+// 	overflow: hidden;
+// 	height: 100%;
+// }
+
+// .scrollbar_active.lock-scroll {
+// 	margin-right: 17px;
+// 	.hamburger_active {
+// 		transform: translateX(-17px);
+// 		right: calc(100% - 347px);
+// 	}
+// }
+
+@media (hover: hover) and (pointer: fine) {
+  .wrapper {
+    .list {
+      .item {
+        &:hover {
+          &:before {
+            background-color: var(--menu-text-color);
+          }
+        }
+      }
+    }
+  }
+}

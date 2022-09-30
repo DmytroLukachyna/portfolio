@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.container {
+  width: #{'clamp(312px, 100%, 336px)'};
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 8px;
+  height: 60px;
+}
+
+.item {
+  user-select: none;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.15s ease-in-out;
+}
+
+@media (max-width: 359px) {
+  .container {
+    height: 56px;
+  }
+  .item {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .item {
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+}

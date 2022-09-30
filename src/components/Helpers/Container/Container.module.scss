@@ -1,0 +1,32 @@
+@import '../../../assets/styles/grid.scss';
+
+.container {
+  @include display;
+  @include position;
+  @include flex-direction;
+  @include justify-content;
+  @include align-items;
+  @include align-content;
+  @include flex-wrap;
+  @include flex-grow;
+  @include gap;
+  @include overflow;
+  &.fullWidth {
+    width: 100%;
+  }
+  &.fullHeight {
+    height: 100%;
+  }
+}
+
+// .container {
+// 	flex-basis: auto;
+// 	&.transition {
+// 		transition: $transition-default;
+// 	}
+// 	&.fullscreen {
+// 		max-width: 100vw;
+// 		width: 100%;
+// 		height: 100vh;
+// 	}
+// }

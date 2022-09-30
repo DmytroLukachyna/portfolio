@@ -1,0 +1,54 @@
+.wrapper {
+  position: fixed;
+  left: 50px;
+  top: 50%;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: left center;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  gap: 12px;
+}
+
+.text {
+  font-size: 18px;
+}
+
+.line {
+  width: 68px;
+  height: 2px;
+  background: var(--text-color);
+}
+
+.link {
+  transform: rotate(90deg);
+  color: var(--text-color);
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link {
+    &:hover {
+      color: var(--social-hover-color);
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .wrapper {
+    display: flex;
+  }
+}
+
+// .old {
+//   .social {
+//     &__link {
+//       transition: all 0.15s ease-in-out;
+//     }
+//   }
+// }

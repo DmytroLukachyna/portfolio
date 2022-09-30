@@ -1,0 +1,21 @@
+@import '../../../assets/styles/variables.scss';
+
+.outer {
+  width: 100%;
+  // height: 100%;
+  flex-grow: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: $containerPadding;
+  padding-right: $containerPadding;
+  background: var(--mainscreen-img) no-repeat 50% / cover;
+  .inner {
+    width: 100%;
+    height: 100%;
+    max-width: $containerWidth;
+    position: relative;
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,64 @@
+.button {
+  width: 48px;
+  height: 48px;
+  padding: 8px 0;
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 50%;
+  box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.25);
+  border: none;
+  outline: 0;
+  background-color: var(--hamburger-color);
+  cursor: pointer;
+  z-index: 11;
+  transition: right 0.5s ease-in-out, background-color 0.15s ease-in-out;
+  .line {
+    background-color: #ffffff;
+    width: 24px;
+    height: 2px;
+    border-radius: 1px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.25);
+    transition: width 0.25s ease-in-out, opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+    &:nth-of-type(2) {
+      width: 36px;
+    }
+  }
+  &.active {
+    right: calc(100% - 300px);
+    .line {
+      width: 32px;
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+      &:nth-of-type(1) {
+        transform: translateY(10.5px) rotate(-45deg);
+      }
+      &:nth-of-type(3) {
+        transform: translateY(-10.5px) rotate(45deg);
+      }
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button {
+    &:hover {
+      .line {
+        width: 32px;
+      }
+    }
+  }
+}
+
+// .hamburger {
+// 	z-index: 10;
+// 	}
+// 	&_active {
+// 		z-index: 11;
+// 	}
+// }
