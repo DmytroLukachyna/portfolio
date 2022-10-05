@@ -10,7 +10,6 @@ import { NavigationProvider } from 'components/Navigation/NavigationProvider';
 import { Social } from 'components/Sections/Social';
 import { Footer } from 'components/Sections/Footer';
 import { Loader } from 'components/Services/Loader';
-import { Language } from 'components/Services/Language';
 
 const Home = lazy(() => import('pages/Home'));
 const About = lazy(() => import('pages/About'));
@@ -83,7 +82,6 @@ const AppRouter: React.FC = () => {
       </NavigationProvider>
       <ThemeSwitch />
       {!about && <Social />}
-      <Language />
     </>
   );
 };

@@ -1,0 +1,130 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 40px;
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: var(--text-color);
+    top: 60px;
+    left: 0;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: calc(100% + 40px);
+    background: var(--text-color);
+    top: -40px;
+    left: 0;
+  }
+  &:first-of-type {
+    &:before {
+      height: 100%;
+      top: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(var(--text-color-rgb), 1) 0%,
+        rgba(var(--text-color-rgb), 1) 80%,
+        rgba(var(--text-color-rgb), 0) 100%
+      );
+    }
+  }
+  &:last-of-type {
+    &:before {
+      background: linear-gradient(
+        180deg,
+        rgba(var(--text-color-rgb), 1) 0%,
+        rgba(var(--text-color-rgb), 1) 80%,
+        rgba(var(--text-color-rgb), 0) 100%
+      );
+    }
+  }
+}
+
+.header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.companyLogo {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.position {
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.company {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.location {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.workingPeriod {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.icon {
+  color: var(--text-color);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title,
+.location,
+.workingPeriod {
+  display: flex;
+  align-items: center;
+}
+
+.location,
+.workingPeriod {
+  gap: 8px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  .line {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 499px) {
+  .card {
+    padding-right: 20px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .companyLogo {
+    width: 100%;
+  }
+}

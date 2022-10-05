@@ -3,6 +3,7 @@ import { Menu } from 'components/Navigation/Menu';
 import { Overlay } from 'components/Helpers/Overlay';
 import { NavigationContext } from 'components/Navigation/NavigationProvider';
 import { HamburgerButton } from './HamburgerButton';
+import { Language } from 'components/Services/Language';
 
 const Navigation: React.FC = () => {
   const { active, setActive } = useContext(NavigationContext);
@@ -11,6 +12,7 @@ const Navigation: React.FC = () => {
       <Overlay active={active} onClick={setActive} />
       <Menu />
       <HamburgerButton />
+      {!active && <Language />}
     </>
   );
 };

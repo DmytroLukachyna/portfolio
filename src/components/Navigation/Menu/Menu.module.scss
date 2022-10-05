@@ -12,9 +12,16 @@
   background-color: var(--menu-background-color);
   z-index: 11;
   visibility: hidden;
-  padding: 40px;
+  padding: {
+    top: 96px;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+  }
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   &.active {
     opacity: 1;
     left: 0;
@@ -69,11 +76,18 @@
   }
 }
 
+.languages {
+  display: flex;
+  height: 48px;
+  gap: 12px;
+  justify-content: center;
+}
+
 .socials {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+  // position: absolute;
+  // bottom: 50px;
+  // left: 50%;
+  // transform: translateX(-50%);
   display: flex;
   gap: 16px;
   justify-content: space-between;

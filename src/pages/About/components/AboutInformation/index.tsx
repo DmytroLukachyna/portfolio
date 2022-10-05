@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import { Text } from 'components/UI/Text';
 import { Container } from 'components/Helpers/Container';
 import { ExternalLink } from 'components/UI/ExternalLink';
@@ -7,37 +8,10 @@ import { Icon } from 'components/UI/Icon';
 import { ReactComponent as UASquareFlagIcon } from 'assets/svg/flags/square/ua.svg';
 import { ReactComponent as HUSquareFlagIcon } from 'assets/svg/flags/square/hu.svg';
 import { ReactComponent as EUSquareFlagIcon } from 'assets/svg/flags/square/eu.svg';
-import { ReactComponent as DjinniIcon } from 'assets/svg/social/djinni.svg';
-import { ReactComponent as TelegramIcon } from 'assets/svg/social/telegram.svg';
-import { ReactComponent as GithubIcon } from 'assets/svg/social/github.svg';
-import { ReactComponent as LinkedInIcon } from 'assets/svg/social/linkedin.svg';
-import style from './AboutInformation.module.scss';
 import { Resume } from 'components/Sections/About/Resume';
-import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
-
-const socialLinks = [
-  {
-    id: 'djinni',
-    link: 'https://djinni.co/q/8f2cb2bfa8/',
-    icon: <DjinniIcon />,
-  },
-  {
-    id: 'github',
-    link: 'https://github.com/DmytroLukachyna',
-    icon: <GithubIcon />,
-  },
-  {
-    id: 'linkedin',
-    link: 'https://www.linkedin.com/in/dmytrolukachyna/',
-    icon: <LinkedInIcon />,
-  },
-  {
-    id: 'telegram',
-    link: 'https://t.me/dmytro_lukachyna',
-    icon: <TelegramIcon />,
-  },
-];
+import { socialLinks } from 'data/contacts';
+import style from './AboutInformation.module.scss';
 
 const AboutInformation: React.FC = () => {
   const { t } = useTranslation(['about']);

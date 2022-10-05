@@ -1,0 +1,50 @@
+.card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.diploma {
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.location {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.studyPeriod {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.location,
+.studyPeriod {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  color: var(--text-color);
+}
+
+@media (max-width: 499px) {
+  .card {
+    flex-direction: column;
+  }
+  .diploma {
+    text-align: center;
+  }
+  .studyPeriod {
+    justify-content: center;
+  }
+}

@@ -28,6 +28,9 @@
 @media (max-width: 359px) {
   .container {
     height: 56px;
+    width: #{'clamp(296px, 100%, 336px)'};
+    padding-left: 8px;
+    padding-right: 8px;
   }
   .item {
     width: 36px;

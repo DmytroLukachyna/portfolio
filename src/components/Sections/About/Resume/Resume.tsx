@@ -7,8 +7,8 @@ import { Button } from 'components/UI/Button';
 import { Icon } from 'components/UI/Icon';
 import { ReactComponent as UARoundedFlagIcon } from 'assets/svg/flags/rounded/ua.svg';
 import { ReactComponent as ENRoundedFlagIcon } from 'assets/svg/flags/rounded/gb.svg';
-import { ReactComponent as HURoundedFlagIcon } from 'assets/svg/flags/rounded/hu.svg';
-import { ReactComponent as RURoundedFlagIcon } from 'assets/svg/flags/rounded/ru.svg';
+// import { ReactComponent as HURoundedFlagIcon } from 'assets/svg/flags/rounded/hu.svg';
+// import { ReactComponent as RURoundedFlagIcon } from 'assets/svg/flags/rounded/ru.svg';
 import style from './Resume.module.scss';
 
 export interface ResumeButtonProps {
@@ -26,7 +26,7 @@ export const ResumeButton: React.FC<ResumeButtonProps> = ({ icon, label, link })
       label={
         <Container display="inline-flex" gap={4} alignitems="center">
           <Icon className={style.flag} icon={icon} />
-          <Text>{label}</Text>
+          <Text className={style.text}>{label}</Text>
         </Container>
       }
     />
@@ -48,18 +48,18 @@ export const Resume: React.FC = () => {
       label: t('textInformationCVEN'),
       link: '/pdf/CV-Dmytro_Lukachyna_(en).pdf',
     },
-    {
-      id: 'hu',
-      icon: <HURoundedFlagIcon />,
-      label: t('textInformationCVHU'),
-      link: '/pdf/CV-Dmytro_Lukachyna_(hu).pdf',
-    },
-    {
-      id: 'ru',
-      icon: <RURoundedFlagIcon />,
-      label: t('textInformationCVRU'),
-      link: '/pdf/CV-Dmytro_Lukachyna_(ru).pdf',
-    },
+    // {
+    //   id: 'hu',
+    //   icon: <HURoundedFlagIcon />,
+    //   label: t('textInformationCVHU'),
+    //   link: '/pdf/CV-Dmytro_Lukachyna_(hu).pdf',
+    // },
+    // {
+    //   id: 'ru',
+    //   icon: <RURoundedFlagIcon />,
+    //   label: t('textInformationCVRU'),
+    //   link: '/pdf/CV-Dmytro_Lukachyna_(ru).pdf',
+    // },
   ];
   return (
     <div className={style.box}>

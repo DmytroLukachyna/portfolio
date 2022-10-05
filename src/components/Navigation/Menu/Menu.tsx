@@ -5,11 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { NavigationContext } from 'components/Navigation/NavigationProvider';
 import { ExternalLink } from 'components/UI/ExternalLink';
 import { Icon } from 'components/UI/Icon';
-import { ReactComponent as DjinniIcon } from 'assets/svg/social/djinni.svg';
-import { ReactComponent as TelegramIcon } from 'assets/svg/social/telegram.svg';
-import { ReactComponent as GithubIcon } from 'assets/svg/social/github.svg';
-import { ReactComponent as LinkedInIcon } from 'assets/svg/social/linkedin.svg';
-import { DJINNI_LINK, GITHUB_LINK, LINKEDIN_LINK, TELEGRAM_LINK } from 'constants/links';
+import { LanguageButton } from 'components/Services/Language/Language';
+import { socialLinks } from 'data/contacts';
 import style from './Menu.module.scss';
 
 const Menu: React.FC = () => {
@@ -22,30 +19,14 @@ const Menu: React.FC = () => {
     { to: '/education', label: `${t('education')}` },
     { to: '/experience', label: `${t('experience')}` },
   ];
-  const socialLinks = [
-    {
-      id: 'djinni',
-      link: `${DJINNI_LINK}`,
-      icon: <DjinniIcon />,
-    },
-    {
-      id: 'github',
-      link: `${GITHUB_LINK}`,
-      icon: <GithubIcon />,
-    },
-    {
-      id: 'linkedin',
-      link: `${LINKEDIN_LINK}`,
-      icon: <LinkedInIcon />,
-    },
-    {
-      id: 'telegram',
-      link: `${TELEGRAM_LINK}`,
-      icon: <TelegramIcon />,
-    },
-  ];
+
   return (
     <nav className={classNames(style.wrapper, { [style.active]: active })}>
+      <div className={style.languages}>
+        <LanguageButton language="en-US" />
+        <LanguageButton language="uk-UA" />
+        {/* <LanguageButton language="ru-RU" /> */}
+      </div>
       <menu className={style.list}>
         {links.map(({ to, label }) => (
           <li key={label} className={style.item}>
