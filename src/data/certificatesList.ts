@@ -2,6 +2,7 @@ import UdemyJSReact from 'assets/img/certificates/udemy_js-react.png';
 import UdemyWebdev from 'assets/img/certificates/udemy_webdev.png';
 import TemplateMonsterHTML from 'assets/img/certificates/templatemonster_html.png';
 import GeekBrainsHTML from 'assets/img/certificates/geekbrains_html.png';
+import EfsetEnglish from 'assets/img/certificates/efset_english.png';
 import GeekBrainsEnglish from 'assets/img/certificates/geekbrains_english.png';
 
 export const certificatesList = [
@@ -32,7 +33,7 @@ export const certificatesList = [
   {
     title: 'English language (Proficiency)',
     authority: 'EF SET',
-    image: UdemyJSReact,
+    image: EfsetEnglish,
     link: 'https://www.efset.org/cert/Ra4UdU',
   },
   {

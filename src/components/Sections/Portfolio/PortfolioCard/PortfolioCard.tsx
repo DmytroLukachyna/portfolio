@@ -6,8 +6,8 @@ import { Text } from 'components/UI/Text';
 import { Icon } from 'components/UI/Icon';
 import { PortfolioCardStack } from './PortfolioCardStack';
 import { ReactComponent as GitHubIcon } from 'assets/svg/social/github.svg';
-import style from './PortfolioCard.module.scss';
 import type { ItemType } from './PortfolioCardStack/PortfolioCardStackItems';
+import style from './PortfolioCard.module.scss';
 
 export interface PortfolioCardProps {
   name: string;
@@ -38,7 +38,7 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({
             {t('visitWebsite')}
           </Text>
         </div>
-        <img className={style.image} src={img} alt="LEX" />
+        <img className={style.image} src={img} alt={name} />
       </ExternalLink>
       <div className={style.info}>
         <div className={style.row}>

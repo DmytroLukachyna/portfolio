@@ -1,12 +1,11 @@
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import routes from './routes';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Navigation } from 'components/Navigation';
 import { ThemeSwitch } from 'theme/ThemeSwitch';
 import { PageContainer } from 'components/Helpers/PageContainer';
-import { NavigationProvider } from 'components/Navigation/NavigationProvider';
 import { Social } from 'components/Sections/Social';
 import { Footer } from 'components/Sections/Footer';
 import { Loader } from 'components/Services/Loader';
@@ -77,9 +76,7 @@ const AppRouter: React.FC = () => {
         </Routes>
       </PageContainer>
       <Footer />
-      <NavigationProvider>
-        <Navigation />
-      </NavigationProvider>
+      <Navigation />
       <ThemeSwitch />
       {!about && <Social />}
     </>

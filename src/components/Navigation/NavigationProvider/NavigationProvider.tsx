@@ -4,6 +4,8 @@ import React, { createContext, ReactNode, useCallback, useState } from 'react';
 interface NavigationContextProps {
   active: boolean;
   setActive(): void;
+  show: boolean;
+  setShow(value: boolean): void;
 }
 
 const NavigationContext = createContext({} as NavigationContextProps);
@@ -14,8 +16,12 @@ interface NavigationProviderProps {
 
 const NavigationProvider: React.FC<NavigationProviderProps> = ({ children }) => {
   const [menuActive, setMenuActive] = useState<boolean>(false);
+  const [controlsShown, setControlsShown] = useState<boolean>(true);
   const setThemeHandler = (): void => {
     setMenuActive((prevState) => !prevState);
+  };
+  const showControlsHandler = (value: boolean) => {
+    setControlsShown(value);
   };
   const handlePressEscape = useCallback(
     ({ code }: KeyboardEvent) => {
@@ -31,6 +37,8 @@ const NavigationProvider: React.FC<NavigationProviderProps> = ({ children }) => 
       value={{
         active: menuActive,
         setActive: setThemeHandler,
+        show: controlsShown,
+        setShow: showControlsHandler,
       }}
     >
       {children}

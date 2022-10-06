@@ -4,12 +4,12 @@ import { NavigationContext } from 'components/Navigation/NavigationProvider';
 import style from './HamburgerButton.module.scss';
 
 const HamburgerButton: React.FC = () => {
-  const { active, setActive } = useContext(NavigationContext);
-
+  const { active, setActive, show } = useContext(NavigationContext);
   return (
     <button
       className={classNames(style.button, {
         [style.active]: active,
+        [style.hidden]: !show,
       })}
       onClick={setActive}
     >

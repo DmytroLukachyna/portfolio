@@ -3,6 +3,7 @@ import { ThemeProvider } from 'theme/Theme';
 import useWindowSize from 'hooks/useWindowSize';
 import AppRouter from './routes/AppRouter';
 import { WidthWarning } from 'components/Sections/WidthWarning';
+import { NavigationProvider } from 'components/Navigation/NavigationProvider';
 
 const App: React.FC = () => {
   const [width] = useWindowSize();
@@ -11,7 +12,9 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider>
-      <AppRouter />
+      <NavigationProvider>
+        <AppRouter />
+      </NavigationProvider>
     </ThemeProvider>
   );
 };

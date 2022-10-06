@@ -9,6 +9,8 @@
   background-color: var(--themeswitch-toggle-background-color);
   cursor: pointer;
   z-index: 11;
+  transition: opacity 0.25s ease, top 0.5s ease;
+
   .toggle {
     width: 40px;
     height: 40px;
@@ -45,38 +47,27 @@
   }
 }
 
-// @media (max-width: 1199px) {
-//   .button {
-//     width: 32px;
-//     height: 60px;
-//     top: 24px;
-//   }
-// }
-
-// .theme {
-
-//
-
-//     &__toggle {
-//         bottom: 0;
-//         background-color: rgb(49, 30, 37);
-//         transition: all 0.5s ease-in-out;
-//     }
-//     input {
-//         &:focus+.theme__toggle {
-//             box-shadow: 0 0 1px var(--background-main-color);
-//         }
-//     }
-// }
-
-// @media (max-width: 1199px) {
-//     .theme {
-
-//         &__toggle:before {
-//             top: -25px;
-//         }
-//         input:checked+.theme__toggle:before {
-//             transform: translateY(30px);
-//         }
-//     }
-// }
+@media (max-width: 1199px) {
+  .button {
+    width: 32px;
+    height: 60px;
+    top: 24px;
+    &.hidden {
+      top: -8px;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .toggle {
+      top: -4px;
+      left: -4px;
+      &.theme {
+        &_dark {
+          transform: translateX(0) translateY(0);
+        }
+        &_light {
+          transform: translateX(0) translateY(32px);
+        }
+      }
+    }
+  }
+}
