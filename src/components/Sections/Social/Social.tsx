@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import { Text } from 'components/UI/Text';
 import { ExternalLink } from 'components/UI/ExternalLink';
 import { Icon } from 'components/UI/Icon';
@@ -13,6 +14,12 @@ export interface SocialProps {
 
 const Social: React.FC<SocialProps> = ({ className }) => {
   const { t } = useTranslation(['general']);
+
+  const { pathname } = useLocation();
+  if (pathname === '/about') {
+    return null;
+  }
+
   return (
     <aside className={classNames(style.wrapper, className)}>
       <Text className={style.text} font="700">

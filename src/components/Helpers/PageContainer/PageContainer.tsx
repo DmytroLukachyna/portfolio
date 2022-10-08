@@ -1,47 +1,70 @@
-import React, { ReactNode, useContext, useEffect, useRef } from 'react';
-import classNames from 'classnames';
-import { NavigationContext } from 'components/Navigation/NavigationProvider';
+import React, { useRef } from 'react';
 import style from './PageContainer.module.scss';
+import { useLocation, useOutlet } from 'react-router-dom';
+import { Navigation } from 'components/Navigation';
+import { ThemeSwitch } from 'theme/ThemeSwitch';
+import { Social } from 'components/Sections/Social';
+import { Footer } from 'components/Sections/Footer';
+import { ThemeProvider } from 'theme/Theme';
+import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
+import useToggleShowNavigation from 'hooks/useToggleShowNavigation';
+import { routes } from 'routes';
+import { SwitchTransition, CSSTransition } from 'react-transition-group';
 
-export interface PageContainerProps {
-  className?: string;
-  children?: ReactNode;
-}
-
-const THRESHOLD = 100;
-
-const PageContainer: React.FC<PageContainerProps> = ({ className, children }) => {
+const PageContainer: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const prevValue = useRef<number>(THRESHOLD);
-  const { show, setShow } = useContext(NavigationContext);
 
-  useEffect(() => {
-    if (ref && ref.current) {
-      const { current: currentRef } = ref;
+  useToggleShowNavigation({ currentRef: ref.current });
 
-      // const trigger = (current: number) => Math.abs(current - prevValue) > 100;
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation(['general']);
 
-      const updateScrollDirection = () => {
-        const currentPosition = currentRef.scrollTop;
-
-        // if (trigger(current)) {
-        if (currentPosition > prevValue.current) {
-          if (show) setShow(false);
-        } else {
-          if (!show) setShow(true);
-        }
-        prevValue.current = currentPosition > THRESHOLD ? currentPosition : THRESHOLD;
-        // }
-      };
-      currentRef.addEventListener('scroll', updateScrollDirection);
-      return () => currentRef.removeEventListener('scroll', updateScrollDirection);
-    }
-  }, [show, setShow]);
+  const location = useLocation();
+  const currentOutlet = useOutlet();
+  const { nodeRef } = routes.find((route) => route.path === location.pathname) ?? {};
 
   return (
-    <div ref={ref} className={classNames(style.outer, className)}>
-      <div className={style.inner}>{children}</div>
-    </div>
+    <ThemeProvider>
+      <Helmet>
+        <html lang={language} />
+        <title>{t('page-title')}</title>
+      </Helmet>
+      <div ref={ref} className={style.outer}>
+        <SwitchTransition>
+          <CSSTransition
+            key={location.pathname}
+            nodeRef={nodeRef}
+            timeout={300}
+            in
+            appear
+            classNames={{
+              enter: style.inner_enter,
+              enterActive: style.inner_enterActive,
+              exitActive: style.inner_exitActive,
+              exitDone: style.inner_exitDone,
+              appear: style.inner_appear,
+              appearActive: style.inner_appearActive,
+              appearDone: style.inner_appearDone,
+              enterDone: style.inner_enterDone,
+              exit: style.inner_exit,
+            }}
+            mountOnEnter
+            unmountOnExit
+          >
+            <div ref={nodeRef} className={style.inner}>
+              {currentOutlet}
+            </div>
+          </CSSTransition>
+        </SwitchTransition>
+      </div>
+      <Navigation />
+      <ThemeSwitch />
+      <Social />
+      <Footer />
+    </ThemeProvider>
   );
 };
 
