@@ -31,9 +31,17 @@
       border: 2px solid var(--text-color);
     }
   }
+  &::selection {
+    background: transparent;
+    color: var(--selection-text-color);
+  }
   &.active {
     background: var(--btn-hover-color);
     color: var(--btn-hover-text-color);
+    &::selection {
+      background: transparent;
+      color: var(--btn-hover-text-color);
+    }
   }
 }
 

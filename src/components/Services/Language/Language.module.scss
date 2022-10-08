@@ -1,6 +1,6 @@
 .wrapper {
   position: fixed;
-  right: 24px;
+  right: 12px;
   top: 50%;
   transform: translateY(-50%);
   overflow: hidden;
@@ -51,6 +51,7 @@
   outline: none;
   border-radius: 50%;
   cursor: pointer;
+  user-select: none;
   transition: scale 0.25s ease, opacity 0.15s ease, box-shadow 0.1s ease;
   img {
     width: 100%;

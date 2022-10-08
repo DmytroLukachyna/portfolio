@@ -21,6 +21,7 @@ const ExternalLink: React.FC<ExternalLinkProps> = ({
       style.link,
       {
         [style[`font_${font}`]]: font,
+        [style.text]: typeof children === 'string',
       },
       className,
     )}

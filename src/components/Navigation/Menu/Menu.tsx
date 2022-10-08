@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import classNames from 'classnames';
-import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { NavigationContext } from 'components/Navigation/NavigationProvider';
 import { ExternalLink } from 'components/UI/ExternalLink';
+import { MenuLink } from './MenuLink';
 import { Icon } from 'components/UI/Icon';
 import { LanguageButton } from 'components/Services/Language/Language';
 import { socialLinks } from 'data/contacts';
@@ -25,20 +25,25 @@ const Menu: React.FC = () => {
       <div className={style.languages}>
         <LanguageButton language="en-US" />
         <LanguageButton language="uk-UA" />
-        {/* <LanguageButton language="ru-RU" /> */}
       </div>
       <menu className={style.list}>
         {links.map(({ to, label }) => (
-          <li key={label} className={style.item}>
-            <NavLink
-              className={({ isActive }) => classNames(style.link, { [style.active]: isActive })}
-              to={to}
-              onClick={setActive}
-              end
-            >
-              {label}
-            </NavLink>
-          </li>
+          <MenuLink
+            key={label.replace(' ', '').toLowerCase()}
+            to={to}
+            label={label}
+            onClick={setActive}
+          />
+          // <li key={label} className={style.item}>
+          //   <NavLink
+          //     className={({ isActive }) => classNames(style.link, { [style.active]: isActive })}
+          //     to={to}
+          //     onClick={setActive}
+          //     end
+          //   >
+          //     {label}
+          //   </NavLink>
+          // </li>
         ))}
       </menu>
       <div className={style.socials}>

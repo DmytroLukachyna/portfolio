@@ -7,10 +7,10 @@ import { ReactComponent as EnvelopeIcon } from 'assets/svg/social/envelope.svg';
 import { ReactComponent as PhoneIcon } from 'assets/svg/social/phone.svg';
 import {
   DJINNI_LINK,
-  EMAIL,
+  EMAIL_LINK,
   GITHUB_LINK,
   LINKEDIN_LINK,
-  PHONE,
+  PHONE_LINK,
   TELEGRAM_LINK,
 } from 'constants/links';
 
@@ -41,12 +41,12 @@ export const contacts = [
   ...socialLinks,
   {
     id: 'email',
-    link: `mailto:${EMAIL}`,
+    link: EMAIL_LINK,
     icon: <EnvelopeIcon />,
   },
   {
     id: 'phone',
-    link: `tel:${PHONE}`,
+    link: PHONE_LINK,
     icon: <PhoneIcon />,
   },
 ];

@@ -65,7 +65,7 @@
   "experience": {
     "title": "Досвід роботи",
     "locationKyiv": "Київ, Україна",
-    "positionJFD": "Junior Front-end Developer",
+    "positionFD": "Front-end Developer",
     "positionWD": "Web Developer",
     "positionTranslator": "Перекладач",
     "genesis-1": "Take part in development of B2B SaaS finance & auditing application (React 18 + TypeScript) by creating completely reusable, stateful and flexible custom components stored as a separate npm package;",

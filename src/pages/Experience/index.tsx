@@ -13,7 +13,7 @@ const Experience: React.FC = () => {
   const careerPath = [
     {
       id: 'genesis',
-      position: t('positionJFD'),
+      position: t('positionFD'),
       company: 'Genesis',
       companyLogo: <GenesisLogoIcon />,
       location: t('locationKyiv'),

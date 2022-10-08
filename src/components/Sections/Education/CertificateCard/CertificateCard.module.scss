@@ -6,6 +6,7 @@
   overflow: hidden;
   transition: box-shadow 0.25s ease, transform 0.25s ease;
   outline: 1px solid rgba(219, 154, 100, 0.25);
+  user-select: none;
 }
 
 .overlay {

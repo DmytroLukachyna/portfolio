@@ -1,17 +1,18 @@
 import React from 'react';
 import classNames from 'classnames';
+import { useTranslation } from 'react-i18next';
 import { Text } from 'components/UI/Text';
 import { Container } from 'components/Helpers/Container';
 import { ExternalLink } from 'components/UI/ExternalLink';
+import { Resume } from 'components/Sections/About/Resume';
 import { Icon } from 'components/UI/Icon';
-
 import { ReactComponent as UASquareFlagIcon } from 'assets/svg/flags/square/ua.svg';
 import { ReactComponent as HUSquareFlagIcon } from 'assets/svg/flags/square/hu.svg';
 import { ReactComponent as EUSquareFlagIcon } from 'assets/svg/flags/square/eu.svg';
-import { Resume } from 'components/Sections/About/Resume';
-import { useTranslation } from 'react-i18next';
 import { socialLinks } from 'data/contacts';
+import { EMAIL, EMAIL_LINK, PHONE, PHONE_LINK, PHONE_UA_PATTERN } from 'constants/links';
 import style from './AboutInformation.module.scss';
+import formatStringByPattern from 'utils/formatStringByPattern';
 
 const AboutInformation: React.FC = () => {
   const { t } = useTranslation(['about']);
@@ -21,17 +22,17 @@ const AboutInformation: React.FC = () => {
         {t('subtitleInfotmation')}
       </Text>
       <Text className={style.text}>{t('textInformationNumber')}</Text>
-      <ExternalLink font="700" className={style.link} href="tel:+380638078737" target="self">
-        +380 63 807 87 37
-      </ExternalLink>
+      <Container>
+        <ExternalLink font="700" className={style.link} href={PHONE_LINK} target="self">
+          {formatStringByPattern(PHONE_UA_PATTERN, PHONE)}
+        </ExternalLink>
+      </Container>
       <Text className={style.text}>E-mail:</Text>
-      <ExternalLink
-        font="700"
-        className={classNames(style.link, style.email)}
-        href="mailto:dmytrolukachyna@gmail.com"
-      >
-        dmytrolukachyna@gmail.com
-      </ExternalLink>
+      <Container>
+        <ExternalLink font="700" className={classNames(style.link, style.email)} href={EMAIL_LINK}>
+          {EMAIL}
+        </ExternalLink>
+      </Container>
       <Text className={style.text}>{t('textInformationSocialLinks')}</Text>
       <Container gap={12}>
         {socialLinks.map(({ id, link, icon }) => (

@@ -36,6 +36,7 @@
     height: 100%;
     object-fit: cover;
     filter: brightness(0.75);
+    user-select: none;
   }
 }
 
@@ -85,6 +86,10 @@
   text-align: center;
   justify-content: center;
   line-height: 20px;
+  &::selection {
+    background: transparent;
+    color: var(--selection-text-color);
+  }
 }
 
 .ghIcon {

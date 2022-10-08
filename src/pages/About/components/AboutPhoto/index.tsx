@@ -1,5 +1,5 @@
 import React from 'react';
-import Photo from 'assets/img/profile/photo.jpg';
+import Photo from 'assets/img/profile/photo.jpeg';
 import style from './AboutPhoto.module.scss';
 
 const AboutPhoto: React.FC = () => {
