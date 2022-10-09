@@ -3,6 +3,7 @@ import Ecobud from 'assets/img/projects/commercial/ecobud.png';
 import Fireplace from 'assets/img/projects/commercial/fireplace.png';
 import ViDecor from 'assets/img/projects/commercial/videcor.png';
 import FreeAccount from 'assets/img/projects/commercial/free-account.png';
+import ExpenseTracker from 'assets/img/projects/pet/expense-tracker.png';
 import Orange from 'assets/img/projects/pet/orange.png';
 import Sparcle from 'assets/img/projects/pet/sparcle.png';
 import Ski from 'assets/img/projects/pet/ski.png';
@@ -69,6 +70,24 @@ const portfolioCardList: PortfolioCardType[] = [
     link: 'projects/commercial/free-account',
     stackList: ['html5', 'css3', 'scss', 'bem', 'javascript', 'figma', 'gulp', 'yarn'],
     sourceCode: `${GITHUB_LINK}/free-account`,
+  },
+  {
+    id: 'expense-tracker',
+    name: 'Expense tracker',
+    img: ExpenseTracker,
+    type: 'pet',
+    link: 'projects/pet/expense-tracker',
+    stackList: [
+      'react',
+      'typescript',
+      'javascript',
+      'scss',
+      'css3',
+      'createreactapp',
+      'figma',
+      'yarn',
+    ],
+    sourceCode: `${GITHUB_LINK}/react-expense-tracker`,
   },
   {
     id: 'orange',
