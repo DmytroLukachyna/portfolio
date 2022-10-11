@@ -40,22 +40,18 @@
     flex-shrink: 0;
     &_appear {
       opacity: 0;
-      transform: translateY(20px);
-      height: 110%;
+      transform: scale(0.9);
     }
     &_appearDone {
       opacity: 1;
-      transform: translateY(0);
-      height: 100%;
       transition: opacity 300ms, transform 300ms;
     }
     &_enter {
       opacity: 0;
-      transform: translateY(20px);
+      transform: scale(0.9);
     }
     &_enterDone {
       opacity: 1;
-      transform: translateY(0);
       transition: opacity 300ms, transform 300ms;
     }
     &_exitActive {
