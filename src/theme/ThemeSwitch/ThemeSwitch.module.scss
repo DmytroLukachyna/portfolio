@@ -49,25 +49,25 @@
 
 @media (max-width: 1199px) {
   .button {
-    width: 32px;
-    height: 60px;
-    top: 24px;
+    // width: 32px;
+    // height: 60px;
+    // top: 24px;
     &.hidden {
       top: -8px;
       opacity: 0;
       pointer-events: none;
     }
-    .toggle {
-      top: -4px;
-      left: -4px;
-      &.theme {
-        &_dark {
-          transform: translateX(0) translateY(0);
-        }
-        &_light {
-          transform: translateX(0) translateY(32px);
-        }
-      }
-    }
+    // .toggle {
+    //   top: -4px;
+    //   left: -4px;
+    //   &.theme {
+    //     &_dark {
+    //       transform: translateX(0) translateY(0);
+    //     }
+    //     &_light {
+    //       transform: translateX(0) translateY(32px);
+    //     }
+    //   }
+    // }
   }
 }
