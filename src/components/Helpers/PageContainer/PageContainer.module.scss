@@ -14,6 +14,7 @@
   scrollbar-color: var(--text-color) rgba(0, 0, 0, 0);
   scrollbar-width: thin;
   scrollbar-gutter: stable both-edges;
+  transition: background 0.15s ease;
   &::-webkit-scrollbar {
     width: 6px;
     height: 6px;

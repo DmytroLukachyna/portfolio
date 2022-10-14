@@ -8,7 +8,7 @@
   background: transparent;
   outline: none;
   cursor: pointer;
-  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background 0.15s ease-in-out, color 0.15s ease-in-out, border 0.15s ease;
   &.font {
     &_400 {
       @include font-400-regular;

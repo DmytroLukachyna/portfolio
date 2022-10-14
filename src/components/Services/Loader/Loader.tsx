@@ -7,11 +7,7 @@ export interface LoaderProps {
 }
 
 const Loader: React.FC<LoaderProps> = ({ className }) => (
-  <span className={classNames(style.component, className)}>
-    Loading... Loading... Loading... Loading... Loading... Loading... Loading... Loading...
-    Loading... Loading... Loading... Loading... Loading... Loading... Loading... Loading...
-    Loading... Loading... Loading... Loading... Loading...
-  </span>
+  <span className={classNames(style.component, className)}>.</span>
 );
 
 export default Loader;

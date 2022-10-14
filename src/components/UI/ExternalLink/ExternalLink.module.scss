@@ -5,8 +5,7 @@
   color: var(--text-color);
   text-decoration: none;
   position: relative;
-  transition: color 0.15s ease-in-out;
-
+  transition: color 0.15s ease;
   &:active,
   &:focus {
     outline: 0;
