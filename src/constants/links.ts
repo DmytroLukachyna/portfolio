@@ -1,7 +1,7 @@
 export const DJINNI_LINK = 'https://djinni.co/q/fd4e325c1c/';
 export const LINKEDIN_LINK = 'https://www.linkedin.com/in/dmytrolukachyna/';
 export const GITHUB_LINK = 'https://github.com/DmytroLukachyna';
-export const TELEGRAM_LINK = 'https://github.com/DmytroLukachyna';
+export const TELEGRAM_LINK = 'https://t.me/dmytro_lukachyna';
 const mailReversed = 'moc.liamg@anyhcakulortymd';
 const phoneReversed = '737870836083+';
 export const EMAIL = mailReversed.split('').reverse().join('');
