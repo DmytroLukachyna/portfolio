@@ -4,6 +4,7 @@ import Fireplace from 'assets/img/projects/commercial/fireplace.png';
 import ViDecor from 'assets/img/projects/commercial/videcor.png';
 import FreeAccount from 'assets/img/projects/commercial/free-account.png';
 import ExpenseTracker from 'assets/img/projects/pet/expense-tracker.png';
+import Randomizer from 'assets/img/projects/pet/randomizer.jpg';
 import Orange from 'assets/img/projects/pet/orange.png';
 import Sparcle from 'assets/img/projects/pet/sparcle.png';
 import Ski from 'assets/img/projects/pet/ski.png';
@@ -88,6 +89,24 @@ const portfolioCardList: PortfolioCardType[] = [
       'yarn',
     ],
     sourceCode: `${GITHUB_LINK}/react-expense-tracker`,
+  },
+  {
+    id: 'randomizer',
+    name: 'Randomizer',
+    img: Randomizer,
+    type: 'pet',
+    link: 'projects/pet/randomizer',
+    stackList: [
+      'react',
+      'typescript',
+      'javascript',
+      'scss',
+      'css3',
+      'createreactapp',
+      'figma',
+      'yarn',
+    ],
+    sourceCode: `${GITHUB_LINK}/randomizer`,
   },
   {
     id: 'orange',
