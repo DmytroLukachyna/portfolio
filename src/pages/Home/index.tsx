@@ -30,7 +30,7 @@ const Home: React.FC = () => {
           <Button
             key={item}
             className={style.button}
-            label={t(item)}
+            label={t(item) as string}
             font="700"
             onClick={handleChangeRoute(`/${item}`)}
           />

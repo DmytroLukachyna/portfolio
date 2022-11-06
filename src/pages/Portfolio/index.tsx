@@ -8,6 +8,7 @@ import {
   PortfolioCardProps,
 } from 'components/Sections/Portfolio/PortfolioCard';
 import portfolioCardList, { PortfolioCardType } from 'data/portfolioCardsList';
+import { PortfolioButtons } from 'types';
 import style from './Portfolio.module.scss';
 
 const Portfolio: React.FC = () => {
@@ -18,46 +19,32 @@ const Portfolio: React.FC = () => {
   };
   const { t } = useTranslation(['portfolio']);
   const handleGetDescription = (id: string) => t(id, { ns: 'portfolioCardDescription' });
+  const buttons: PortfolioButtons[] = [
+    { type: 'all', label: 'buttonAll' },
+    { type: 'commercial', label: 'buttonCommercial' },
+    { type: 'test', label: 'buttonTestTasks' },
+    { type: 'pet', label: 'buttonPetProjects' },
+  ];
   return (
     <main className={style.wrapper}>
       <PageTitle title={t('title')} />
       <div className={style.buttons}>
-        <Button
-          label={t('buttonAll')}
-          className={style.button}
-          active={selectedType === 'all'}
-          onClick={() => {
-            setFilteredCardList(portfolioCardList);
-            setSelectedType('all');
-          }}
-        />
-        <Button
-          label={t('buttonCommercial')}
-          className={style.button}
-          active={selectedType === 'commercial'}
-          onClick={() => {
-            handleCardListFilter('commercial');
-            setSelectedType('commercial');
-          }}
-        />
-        <Button
-          label={t('buttonTestTasks')}
-          className={style.button}
-          active={selectedType === 'test'}
-          onClick={() => {
-            handleCardListFilter('test');
-            setSelectedType('test');
-          }}
-        />
-        <Button
-          label={t('buttonPetProjects')}
-          className={style.button}
-          active={selectedType === 'pet'}
-          onClick={() => {
-            handleCardListFilter('pet');
-            setSelectedType('pet');
-          }}
-        />
+        {buttons.map(({ type, label }) => (
+          <Button
+            key={type}
+            label={t(label) as string}
+            className={style.button}
+            active={selectedType === type}
+            onClick={() => {
+              if (type === 'all') {
+                setFilteredCardList(portfolioCardList);
+              } else {
+                handleCardListFilter(type);
+              }
+              setSelectedType(type);
+            }}
+          />
+        ))}
       </div>
       <div className={style.grid}>
         {filteredCardList.map(({ id, name, img, link, type, stackList, sourceCode }) => (
