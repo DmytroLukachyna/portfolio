@@ -1,45 +1,25 @@
 import React, { ReactNode } from 'react';
 import classNames from 'classnames';
-// import { Display } from 'Components/types/gridTypes';
+import { ExternalClassNameType } from 'types';
 import style from './Icon.module.scss';
 
-export interface IconProps {
+interface IconProps extends ExternalClassNameType {
   icon: ReactNode;
   path?: 'currentColor';
   stroke?: 'currentColor';
   ellipse?: 'currentColor';
-  // display?: Display;
-  // cursor?: 'default' | 'pointer' | 'move' | 'inherit';
-  // transition?: 'inherit' | 'unset';
-  // clickThrough?: boolean;
-  className?: string;
   onClick?(): void;
 }
 
-const Icon: React.FC<IconProps> = ({
-  icon,
-  path,
-  stroke,
-  ellipse,
-  // display = 'inline-flex',
-  // cursor,
-  // transition,
-  // clickThrough,
-  className,
-  onClick,
-}) => (
+const Icon: React.FC<IconProps> = ({ icon, path, stroke, ellipse, className, onClick }) => (
   <div
     role="presentation"
     className={classNames(
       style.icon,
-      // style[`display_${display}`],
       {
         [style[`path_${path}`]]: path,
         [style[`stroke_${stroke}`]]: stroke,
         [style[`ellipse_${ellipse}`]]: ellipse,
-        //   [style[`cursor_${cursor}`]]: cursor,
-        //   [style[`transition_${transition}`]]: transition,
-        //   [style.clickThrough]: clickThrough,
       },
       className,
     )}

@@ -1,11 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Text } from 'components/UI/Text';
+import { ExternalClassNameType } from 'types';
 import style from './PageTitle.module.scss';
 
-export interface PageTitleProps {
+interface PageTitleProps extends ExternalClassNameType {
   title: string;
-  className?: string;
 }
 
 const PageTitle: React.FC<PageTitleProps> = ({ title, className }) => (

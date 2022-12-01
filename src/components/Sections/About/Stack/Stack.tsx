@@ -1,19 +1,14 @@
 import React from 'react';
 import classNames from 'classnames';
+import { ExternalClassNameType, StackItemType } from 'types';
 import style from './Stack.module.scss';
-
-export interface StackItemType {
-  icon: string;
-  name: string;
-}
 
 export const StackItem: React.FC<StackItemType> = ({ icon, name }) => (
   <img src={icon} title={name} className={style.item} alt={name} />
 );
 
-export interface StackContainerProps {
+interface StackContainerProps extends ExternalClassNameType {
   stackList: StackItemType[][];
-  className?: string;
 }
 
 export const StackContainer: React.FC<StackContainerProps> = ({ stackList, className }) => (

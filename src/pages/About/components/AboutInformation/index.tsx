@@ -2,17 +2,17 @@ import React from 'react';
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
 import { Text } from 'components/UI/Text';
+import { Icon } from 'components/UI/Icon';
 import { Container } from 'components/Helpers/Container';
 import { ExternalLink } from 'components/UI/ExternalLink';
 import { Resume } from 'components/Sections/About/Resume';
-import { Icon } from 'components/UI/Icon';
+import { socialLinks } from 'data/contacts';
+import { EMAIL, EMAIL_LINK, PHONE, PHONE_LINK, PHONE_UA_PATTERN } from 'constants/links';
 import { ReactComponent as UASquareFlagIcon } from 'assets/svg/flags/square/ua.svg';
 import { ReactComponent as HUSquareFlagIcon } from 'assets/svg/flags/square/hu.svg';
 import { ReactComponent as EUSquareFlagIcon } from 'assets/svg/flags/square/eu.svg';
-import { socialLinks } from 'data/contacts';
-import { EMAIL, EMAIL_LINK, PHONE, PHONE_LINK, PHONE_UA_PATTERN } from 'constants/links';
-import style from './AboutInformation.module.scss';
 import formatStringByPattern from 'utils/formatStringByPattern';
+import style from './AboutInformation.module.scss';
 
 const AboutInformation: React.FC = () => {
   const { t } = useTranslation(['about']);

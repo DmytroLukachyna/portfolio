@@ -2,13 +2,10 @@ import React from 'react';
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
 import { Text } from 'components/UI/Text';
+import { ExternalClassNameType } from 'types';
 import style from './WidthWarning.module.scss';
 
-export interface WidthWarningProps {
-  className?: string;
-}
-
-const WidthWarning: React.FC<WidthWarningProps> = ({ className }) => {
+const WidthWarning: React.FC<ExternalClassNameType> = ({ className }) => {
   const { t } = useTranslation(['warning']);
   return (
     <div className={classNames(style.wrapper, className)}>

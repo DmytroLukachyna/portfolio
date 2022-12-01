@@ -34,16 +34,6 @@ const Menu: React.FC = () => {
             label={label}
             onClick={setActive}
           />
-          // <li key={label} className={style.item}>
-          //   <NavLink
-          //     className={({ isActive }) => classNames(style.link, { [style.active]: isActive })}
-          //     to={to}
-          //     onClick={setActive}
-          //     end
-          //   >
-          //     {label}
-          //   </NavLink>
-          // </li>
         ))}
       </menu>
       <div className={style.socials}>

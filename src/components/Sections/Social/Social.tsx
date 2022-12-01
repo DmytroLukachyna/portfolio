@@ -6,13 +6,10 @@ import { Text } from 'components/UI/Text';
 import { ExternalLink } from 'components/UI/ExternalLink';
 import { Icon } from 'components/UI/Icon';
 import { contacts } from 'data/contacts';
+import { ExternalClassNameType } from 'types';
 import style from './Social.module.scss';
 
-export interface SocialProps {
-  className?: string;
-}
-
-const Social: React.FC<SocialProps> = ({ className }) => {
+const Social: React.FC<ExternalClassNameType> = ({ className }) => {
   const { t } = useTranslation(['general']);
 
   const { pathname } = useLocation();

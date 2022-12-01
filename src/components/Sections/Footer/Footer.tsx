@@ -2,13 +2,10 @@ import React from 'react';
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
 import { Text } from 'components/UI/Text';
+import { ExternalClassNameType } from 'types';
 import style from './Footer.module.scss';
 
-export interface FooterProps {
-  className?: string;
-}
-
-const Footer: React.FC<FooterProps> = ({ className }) => {
+const Footer: React.FC<ExternalClassNameType> = ({ className }) => {
   const {
     t,
     i18n: { language },

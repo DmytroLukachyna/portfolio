@@ -1,18 +1,18 @@
 import React, { ReactNode } from 'react';
 import classNames from 'classnames';
-import type { Tag, TextAlign, TextTransform } from 'types/textTypes';
+import { ExternalClassNameType } from 'types';
+import type { FontType, Tag, TextAlign, TextTransform } from 'types/textTypes';
 import type { Display, Transition } from 'types/layoutTypes';
 import style from './Text.module.scss';
 
-export interface TextProps {
+interface TextProps extends ExternalClassNameType {
   tag?: Tag;
-  font?: '400' | '700' | '400-italic' | '700-italic';
+  font?: FontType;
   display?: Display;
   textalign?: TextAlign;
   texttransform?: TextTransform;
   transition?: Transition;
   noSelect?: boolean;
-  className?: string;
   children: ReactNode;
 }
 

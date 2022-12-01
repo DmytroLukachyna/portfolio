@@ -7,9 +7,10 @@ import { Icon } from 'components/UI/Icon';
 import { PortfolioCardStack } from './PortfolioCardStack';
 import { ReactComponent as GitHubIcon } from 'assets/svg/social/github.svg';
 import type { ItemType } from './PortfolioCardStack/PortfolioCardStackItems';
+import { ExternalClassNameType } from 'types';
 import style from './PortfolioCard.module.scss';
 
-export interface PortfolioCardProps {
+export interface PortfolioCardProps extends ExternalClassNameType {
   name: string;
   description: string;
   img: string;
@@ -17,7 +18,6 @@ export interface PortfolioCardProps {
   type: 'commercial' | 'pet' | 'test';
   stackList: ItemType[];
   sourceCode: string;
-  className?: string;
 }
 
 export const PortfolioCard: React.FC<PortfolioCardProps> = ({

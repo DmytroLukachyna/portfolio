@@ -1,9 +1,10 @@
 import React, { ReactNode } from 'react';
 import classNames from 'classnames';
 import type * as LayoutTypes from 'types/layoutTypes';
+import { ExternalClassNameType } from 'types';
 import style from './Container.module.scss';
 
-export interface ContainerProps {
+interface ContainerProps extends ExternalClassNameType {
   display?: LayoutTypes.Display;
   position?: LayoutTypes.Position;
   flexdirection?: LayoutTypes.FlexDirection;
@@ -17,7 +18,6 @@ export interface ContainerProps {
   overflow?: LayoutTypes.Overflow;
   fullWidth?: boolean;
   fullHeight?: boolean;
-  className?: string;
   children?: ReactNode;
 }
 

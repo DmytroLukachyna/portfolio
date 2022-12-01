@@ -1,14 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
-import style from './Certificates.module.scss';
-import { CertificateCard } from '../CertificateCard';
+import { CertificateCard } from 'components/Sections/Education/CertificateCard';
 import { certificatesList } from 'data/certificatesList';
+import { ExternalClassNameType } from 'types';
+import style from './Certificates.module.scss';
 
-export interface CertificatesProps {
-  className?: string;
-}
-
-const Certificates: React.FC<CertificatesProps> = ({ className }) => (
+const Certificates: React.FC<ExternalClassNameType> = ({ className }) => (
   <div className={classNames(style.wrapper, className)}>
     {certificatesList.map(({ title, authority, image, link }) => (
       <CertificateCard

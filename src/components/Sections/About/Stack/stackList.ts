@@ -1,4 +1,3 @@
-import { StackItemType } from './Stack';
 import HTMLIcon from 'assets/svg/stack/html.svg';
 import CSSIcon from 'assets/svg/stack/css.svg';
 import SASSIcon from 'assets/svg/stack/sass.svg';
@@ -23,6 +22,7 @@ import TrelloIcon from 'assets/svg/stack/trello.svg';
 import FigmaIcon from 'assets/svg/stack/figma.svg';
 import AvocodeIcon from 'assets/svg/stack/avocode.svg';
 import PhotoshopIcon from 'assets/svg/stack/photoshop.svg';
+import { StackItemType } from 'types';
 
 export const stackList: StackItemType[][] = [
   [

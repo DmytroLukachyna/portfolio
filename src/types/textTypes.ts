@@ -9,3 +9,4 @@ export type TextTransform =
   | 'inherit'
   | 'initial'
   | 'unset';
+export type FontType = '400' | '700' | '400-italic' | '700-italic';

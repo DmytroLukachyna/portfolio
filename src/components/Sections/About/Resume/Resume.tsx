@@ -11,7 +11,7 @@ import { ReactComponent as ENRoundedFlagIcon } from 'assets/svg/flags/rounded/gb
 // import { ReactComponent as RURoundedFlagIcon } from 'assets/svg/flags/rounded/ru.svg';
 import style from './Resume.module.scss';
 
-export interface ResumeButtonProps {
+interface ResumeButtonProps {
   icon: ReactElement;
   label: string;
   link: string;

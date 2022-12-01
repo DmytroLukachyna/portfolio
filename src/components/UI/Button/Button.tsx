@@ -1,11 +1,12 @@
 import React, { ButtonHTMLAttributes, ReactElement } from 'react';
 import classNames from 'classnames';
+import { FontType } from 'types/textTypes';
 import style from './Button.module.scss';
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string | ReactElement;
   borderWidth?: 1 | 2;
-  font?: '400' | '700' | '400-italic' | '700-italic';
+  font?: FontType;
   active?: boolean;
 }
 

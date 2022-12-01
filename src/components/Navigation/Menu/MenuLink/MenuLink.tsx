@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { NavigationContext } from 'components/Navigation/NavigationProvider';
 import style from './MenuLink.module.scss';
 
-export interface MenuLinkProps {
+interface MenuLinkProps {
   to: string;
   label: string;
   onClick(): void;

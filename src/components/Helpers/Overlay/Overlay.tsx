@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import style from './Overlay.module.scss';
 
-export interface OverlayProps {
+interface OverlayProps {
   active: boolean;
   onClick?(): void;
 }

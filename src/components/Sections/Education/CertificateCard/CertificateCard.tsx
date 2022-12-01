@@ -3,13 +3,13 @@ import classNames from 'classnames';
 import style from './CertificateCard.module.scss';
 import { ExternalLink } from 'components/UI/ExternalLink';
 import { Text } from 'components/UI/Text';
+import { ExternalClassNameType } from 'types';
 
-export interface CertificateCardProps {
+interface CertificateCardProps extends ExternalClassNameType {
   title: string;
   authority: string;
   image: string;
   link: string;
-  className?: string;
 }
 
 const CertificateCard: React.FC<CertificateCardProps> = ({

@@ -1,10 +1,11 @@
 import React, { AnchorHTMLAttributes, ReactNode } from 'react';
 import classNames from 'classnames';
+import { FontType } from 'types/textTypes';
 import style from './ExternalLink.module.scss';
 
-export interface ExternalLinkProps extends AnchorHTMLAttributes<Element> {
+interface ExternalLinkProps extends AnchorHTMLAttributes<Element> {
   href: string;
-  font?: '400' | '700' | '400-italic' | '700-italic';
+  font?: FontType;
   target?: 'blank' | 'self';
   children?: string | ReactNode;
 }

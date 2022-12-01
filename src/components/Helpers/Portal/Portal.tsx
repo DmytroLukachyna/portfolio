@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 
-export interface PortalProps {
+interface PortalProps {
   children: ReactNode;
 }
 

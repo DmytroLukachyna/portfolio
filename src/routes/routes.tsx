@@ -4,11 +4,6 @@ const About = lazy(() => import('pages/About'));
 const Portfolio = lazy(() => import('pages/Portfolio'));
 const Education = lazy(() => import('pages/Education'));
 const Experience = lazy(() => import('pages/Experience'));
-// import Home from 'pages/Home';
-// import About from 'pages/About';
-// import Portfolio from 'pages/Portfolio';
-// import Education from 'pages/Education';
-// import Experience from 'pages/Experience';
 import { Loader } from 'components/Services/Loader';
 import NotFoundPage from 'pages/NotFoundPage';
 

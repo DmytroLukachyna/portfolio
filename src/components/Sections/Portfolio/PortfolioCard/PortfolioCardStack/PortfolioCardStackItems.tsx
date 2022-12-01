@@ -41,7 +41,7 @@ export type ItemType =
   | 'webpack'
   | 'gulp';
 
-export interface ItemContent {
+interface ItemContent {
   title:
     | 'HTML5'
     | 'CSS3'

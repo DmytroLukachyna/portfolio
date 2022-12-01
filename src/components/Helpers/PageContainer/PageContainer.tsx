@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import style from './PageContainer.module.scss';
 import { useLocation, useOutlet } from 'react-router-dom';
 import { Navigation } from 'components/Navigation';
 import { ThemeSwitch } from 'theme/ThemeSwitch';
@@ -11,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 import useToggleShowNavigation from 'hooks/useToggleShowNavigation';
 import { routes } from 'routes';
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
+import style from './PageContainer.module.scss';
 
 const PageContainer: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);

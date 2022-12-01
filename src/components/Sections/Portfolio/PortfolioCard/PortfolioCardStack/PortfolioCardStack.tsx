@@ -4,7 +4,7 @@ import { cardStackItemListType, ItemType } from './PortfolioCardStackItems';
 import { Text } from 'components/UI/Text';
 import style from './PortfolioCardStack.module.scss';
 
-export interface PortfolioCardStackItemProps {
+interface PortfolioCardStackItemProps {
   name: ItemType;
 }
 
@@ -17,7 +17,7 @@ export const PortfolioCardStackItem: React.FC<PortfolioCardStackItemProps> = ({ 
   />
 );
 
-export interface PortfolioCardStackProps {
+interface PortfolioCardStackProps {
   stackList: ItemType[];
 }
 

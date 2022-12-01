@@ -4,16 +4,16 @@ import { Text } from 'components/UI/Text';
 import { Icon } from 'components/UI/Icon';
 import { ReactComponent as LocationIcon } from 'assets/svg/work/location.svg';
 import { ReactComponent as CalendarIcon } from 'assets/svg/work/calendar.svg';
+import { ExternalClassNameType } from 'types';
 import style from './WorkplaceCard.module.scss';
 
-export interface WorkplaceCardProps {
+interface WorkplaceCardProps extends ExternalClassNameType {
   position: string;
   company: string;
   location: string;
   workingPeriod: string;
   companyLogo: ReactNode;
   description: string[];
-  className?: string;
 }
 
 const WorkplaceCard: React.FC<WorkplaceCardProps> = ({

@@ -1,11 +1,17 @@
-import UdemyJSReact from 'assets/img/certificates/udemy_js-react.png';
-import UdemyWebdev from 'assets/img/certificates/udemy_webdev.png';
+import UdemyReact from 'assets/img/certificates/udemy_react.jpg';
+import UdemyJSReact from 'assets/img/certificates/udemy_js-react.jpg';
+import UdemyWebdev from 'assets/img/certificates/udemy_webdev.jpg';
 import TemplateMonsterHTML from 'assets/img/certificates/templatemonster_html.png';
 import GeekBrainsHTML from 'assets/img/certificates/geekbrains_html.png';
 import EfsetEnglish from 'assets/img/certificates/efset_english.png';
-import GeekBrainsEnglish from 'assets/img/certificates/geekbrains_english.png';
 
 export const certificatesList = [
+  {
+    title: 'React - The Complete Guide',
+    authority: 'Udemy, Maximilian Schwarzmüller',
+    image: UdemyReact,
+    link: 'https://www.udemy.com/certificate/UC-de54a97c-61eb-4166-b01a-26ec25509100/',
+  },
   {
     title: 'Complete JS + React Course',
     authority: 'Udemy, Ivan Petrychenko',
@@ -35,11 +41,5 @@ export const certificatesList = [
     authority: 'EF SET',
     image: EfsetEnglish,
     link: 'https://www.efset.org/cert/Ra4UdU',
-  },
-  {
-    title: 'English language (Upper-Intermediate)',
-    authority: 'GeekBrains',
-    image: GeekBrainsEnglish,
-    link: 'https://geekbrains.ru/certificates/986203.en',
   },
 ];
